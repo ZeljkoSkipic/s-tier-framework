@@ -1,0 +1,415 @@
+:root {
+	--font-size-1: 5rem;
+	--font-size-2: 4.5rem;
+	--font-size-3: 4rem;
+	--font-size-4: 3rem;
+	--font-size-5: 2.5rem;
+	--font-size-6: 20px;
+
+	--line-height: 1.2;
+
+	--space-1: 10rem;
+	--space-2: 8rem;
+	--space-3: 6rem;
+	--space-4: 3rem;
+
+	--title-space-1: 6rem;
+	--title-space-2: 4rem;
+	--title-space-3: 3rem;
+	--title-space-4: 2rem;
+
+	--color-1: #45eba5;
+	--color-2: #212121;
+	--color-3: #EB5E44;
+	--color-4: #33D4BE;
+
+	--bg-1: #f7f7f7;
+
+	--st: .3s all;
+
+
+
+	@media (min-width: 797.6px) /* Insert the same width as limbo-min variable */ {
+	  --site-width: 90%;
+	  --body-size: 18px;
+	}
+
+	@media (max-width: 797.5px) /* Insert the same width as tab-max variable */ {
+	  --site-width: calc(100% - 50px);
+	  --body-size: 17px;
+	}
+	--site-max-width: 1440px;
+  }
+
+  // Breakpoint sizes - Associated with Breakpoints in Mixins.scss
+
+  $mob-max: 479.5px;
+  $tab-min: 479.6px;
+  $tab-max: 797.5px;
+  $limbo-min: 797.6px;
+  $limbo-max: 1199.5px;
+  $desk-min: 1199.6px;
+  $sm-desk-max: 1360.5px;
+  $md-desk-min: 1360.6px;
+  $md-desk-max: 1659.5px;
+  $lg-desk-min: 1659.6px;
+  $huge-desk-min: 2560px;
+
+
+
+@mixin abs {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+
+@mixin clean-list {
+	padding-left: 0;
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+@mixin flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-center {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin bg_div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+
+// Breakpoints
+
+@mixin mob-only {
+	@media (max-width: $mob-max) {
+		@content;
+	}
+}
+
+@mixin tab-min {
+	@media (min-width: $tab-min) {
+		@content;
+	}
+}
+
+@mixin tab-max {
+	@media (max-width: $tab-max) {
+		@content;
+	}
+}
+
+@mixin tab-only {
+	@media (min-width: $tab-min) and (max-width: $tab-max) {
+		@content;
+	}
+}
+
+@mixin limbo-min {
+	@media (min-width: $limbo-min) {
+		@content;
+	}
+}
+
+@mixin limbo-max {
+	@media (max-width: $limbo-max) {
+		@content;
+	}
+}
+
+@mixin limbo-only {
+	@media (min-width: $limbo-min) and (max-width: $limbo-max) {
+		@content;
+	}
+}
+
+@mixin desk-min {
+	@media (min-width: $desk-min) {
+		@content;
+	}
+}
+
+@mixin sm-desk-only {
+	@media (min-width: $desk-min) and (max-width: $sm-desk-max) {
+		@content;
+	}
+}
+
+@mixin sm-desk-max {
+	@media (max-width: $sm-desk-max) {
+		@content;
+	}
+}
+
+@mixin md-desk-min {
+	@media (min-width: $md-desk-min) {
+		@content;
+	}
+}
+
+@mixin md-desk-max {
+	@media (min-width: $md-desk-max) {
+		@content;
+	}
+}
+
+@mixin md-desk-only {
+	@media (min-width: $md-desk-min)  and (max-width: $md-desk-max) {
+		@content;
+	}
+}
+
+@mixin lg-desk-min {
+	@media (min-width: $lg-desk-min) {
+		@content;
+	}
+}
+
+@mixin huge-desk-min {
+	@media (min-width: $huge-desk-min) {
+		@content;
+	}
+}
+
+
+// Spacings
+
+.space_1 {
+	padding-top: var(--space-1);
+	padding-bottom: var(--space-1);
+}
+
+.space_2 {
+	padding-top: var(--space-2);
+	padding-bottom: var(--space-2);
+}
+
+.space_3 {
+	padding-top: var(--space-3);
+	padding-bottom: var(--space-3);
+}
+
+.space_4 {
+	padding-top: var(--space-4);
+	padding-bottom: var(--space-4);
+}
+
+.space_0_1 {
+	padding-bottom: var(--space-1);
+}
+
+.space_0_2 {
+	padding-bottom: var(--space-2);
+}
+
+.space_0_3 {
+	padding-bottom: var(--space-3);
+}
+
+.space_0_4 {
+	padding-bottom: var(--space-4);
+}
+
+.space_1_0 {
+	padding-top: var(--space-1);
+}
+
+.space_1_2 {
+	padding-top: var(--space-1);
+	padding-bottom: var(--space-2);
+}
+
+.space_1_3 {
+	padding-top: var(--space-1);
+	padding-bottom: var(--space-3);
+}
+
+.space_1_4 {
+	padding-top: var(--space-1);
+	padding-bottom: var(--space-4);
+}
+
+.space_2_0 {
+	padding-top: var(--space-2);
+}
+
+.space_2_1 {
+	padding-top: var(--space-2);
+	padding-bottom: var(--space-1);
+}
+
+.space_2_3 {
+	padding-top: var(--space-2);
+	padding-bottom: var(--space-3);
+}
+
+.space_2_4 {
+	padding-top: var(--space-2);
+	padding-bottom: var(--space-4);
+}
+
+.space_3_0 {
+	padding-top: var(--space-3);
+}
+
+.space_3_1 {
+	padding-top: var(--space-3);
+	padding-bottom: var(--space-1);
+}
+
+.space_3_2 {
+	padding-top: var(--space-3);
+	padding-bottom: var(--space-2);
+}
+
+.space_3_4 {
+	padding-top: var(--space-3);
+	padding-bottom: var(--space-4);
+}
+
+.space_4_0 {
+	padding-top: var(--space-4);
+}
+
+.space_4_1 {
+	padding-top: var(--space-4);
+	padding-bottom: var(--space-1);
+}
+
+.space_4_2 {
+	padding-top: var(--space-4);
+	padding-bottom: var(--space-2);
+}
+
+.space_4_3 {
+	padding-top: var(--space-4);
+	padding-bottom: var(--space-3);
+}
+
+
+// Title Spacings
+
+.t_space_1 {
+	margin-bottom: var(--title-space-1);
+}
+
+.t_space_2 {
+	margin-bottom: var(--title-space-2);
+}
+
+.t_space_3 {
+	margin-bottom: var(--title-space-3);
+}
+
+.t_space_4 {
+	margin-bottom: var(--title-space-4);
+}
+
+
+// Buttons
+
+@mixin btn {
+	padding: 1rem 2.5rem;
+	width: fit-content;
+	min-width: 150px;
+	display: inline-flex;
+	box-sizing: border-box;
+	justify-content: center;
+	transition: var(--st);
+	position: relative;
+	overflow: hidden;
+
+	color: #fff;
+	font-size: 1.6rem
+}
+
+@mixin btn-1 {
+	@include btn;
+	background-color: var(--color-1);
+}
+
+@mixin btn-2 {
+	@include btn;
+	background-color: var(--color-2);
+	&:not(:first-of-type) {
+		@include tab-min {
+			margin-left: 2rem;
+		}
+	}
+}
+
+.btn-1 {
+	@include btn-1;
+}
+
+.btn-2 {
+	@include btn-2;
+}
+
+
+html {
+	font-size: 10px;
+	@include md-desk-only {
+		font-size: 8px;
+	  }
+	  @include sm-desk-only {
+		font-size: 7px;
+	  }
+	  @include limbo-only {
+		font-size: 7px;
+	  }
+	  @include tab-only {
+		font-size: 8px;
+	  }
+	  @include mob-only {
+		font-size: 7px;
+	  }
+	  :where(.wp-block) {
+		max-width: 90%;
+	  }
+}
+
+:root {
+	@include mob-only {
+		--space-1: 6rem;
+		--space-2: 5rem;
+		--space-3: 4rem;
+		--space-4: 3rem;
+	}
+}
