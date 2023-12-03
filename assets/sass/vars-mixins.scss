@@ -382,6 +382,17 @@
 	@include btn-2;
 }
 
+@mixin bs {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@mixin ds {
+	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+@mixin br1 {
+	border-radius: .5rem;
+}
 
 html {
 	font-size: 10px;

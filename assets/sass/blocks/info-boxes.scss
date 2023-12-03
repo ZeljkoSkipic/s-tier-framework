@@ -1,0 +1,9 @@
+.st_info_boxes {
+	.st_info_boxes_inner {
+		@include flex;
+		.ib_image {
+			aspect-ratio: 4 / 3;
+			margin-bottom: var(--space-4);
+		}
+	}
+}

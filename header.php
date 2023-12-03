@@ -17,13 +17,19 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!--
+	Insert site main color
 	<meta name="theme-color" content="#45eba5" />
+	-->
+	<?php the_field('head_script', 'option'); ?> <!-- Head External Code -->
 	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php the_field('body_top_script', 'option'); ?> <!-- Body Top External Code -->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'stier' ); ?></a>
 	<div class="top_bar">
@@ -41,7 +47,7 @@
 	</div>
 
 	</div>
-	<header id="masthead" class="header-main container">
+	<header id="masthead" class="header-main">
 		<div class="container">
 			<figure class="site-logo">
 				<?php

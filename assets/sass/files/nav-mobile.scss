@@ -15,6 +15,7 @@ label[for="nav-toggle"] {
         height: 70px;
 		width: 100%;
 		box-sizing: border-box;
+		z-index: 9;
 		.container {
 			display: flex;
 			justify-content: space-between;
@@ -48,6 +49,7 @@ label[for="nav-toggle"] {
 			left: 0;
 			margin-top: 9px;
 			padding: 25px;
+			z-index: 9;
 			li {
 				position: relative;
 				a {
@@ -115,8 +117,8 @@ label[for="nav-toggle"] {
     /* Nav Trigger Start */
 
 	.hamburger{
-		height: 50px;
-		width: 50px;
+		height: 30px;
+		width: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -127,7 +129,7 @@ label[for="nav-toggle"] {
 			left: 0;
 			background: #000;
 			height: 2px;
-			width: 60%;
+			width: 100%;
 			transition: all  0.4s ease;
 			&::before, &:after {
 				content: '';

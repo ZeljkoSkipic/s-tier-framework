@@ -21,5 +21,12 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<!--
+	         (__)
+     `\------(oo)
+       ||    (__) <(What are you looking for?)
+       ||w--||
+-->
+<?php the_field('body_bottom_script', 'option'); ?> <!-- Body Bottom External Code -->
 </body>
 </html>

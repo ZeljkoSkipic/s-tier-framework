@@ -1,9 +1,15 @@
 @import 'vendor/normalize';
+// @import 'vendor/fonts';
 
 @import 'vars-mixins';
 
 @import 'files/globals';
+@import 'components';
 @import 'files/archive';
+
+@import 'blocks/accordion';
+@import 'blocks/tabs';
+@import 'blocks/info-boxes';
 
 @import 'files/nav';
 @import 'files/nav-mobile';

@@ -73,11 +73,15 @@ function stier_scripts() {
 	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/dist/theme.js', array('jquery'), $js_cache_buster );
 
 	wp_enqueue_style( 'stier-style', get_stylesheet_uri(), array(), S_VERSION );
-
-
-
 }
 add_action( 'wp_enqueue_scripts', 'stier_scripts' );
+
+
+// Admin Styles
+function stier_admin_styles() {
+	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/admin/admin.css' );
+}
+add_action( 'admin_enqueue_scripts', 'stier_admin_styles' );
 
 // Custom template tags for this theme.
 
