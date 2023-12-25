@@ -7,10 +7,6 @@
  * @package s-tier
  */
 
-if ( ! defined( 'S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( 'S_VERSION', '1.0.0' );
-}
 
 // Sets up theme defaults and registers support for various WordPress features.
 
@@ -69,17 +65,17 @@ function stier_scripts() {
 	$css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.css'));
 	$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.js'));
 
-	wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/assets/dist/theme.css', array(), $css_cache_buster, 'all' );
+	wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/assets/dist/theme.min.css', array(), $css_cache_buster, 'all' );
 	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/dist/theme.js', array('jquery'), $js_cache_buster );
 
-	wp_enqueue_style( 'stier-style', get_stylesheet_uri(), array(), S_VERSION );
+	wp_enqueue_style( 'stier-style', get_stylesheet_uri(), array(), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'stier_scripts' );
 
 
 // Admin Styles
 function stier_admin_styles() {
-	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/admin/admin.css' );
+	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css' );
 }
 add_action( 'admin_enqueue_scripts', 'stier_admin_styles' );
 

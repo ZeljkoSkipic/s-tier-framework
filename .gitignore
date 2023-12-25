@@ -7,3 +7,6 @@ package-lock.json
 gulpfile.babel.js
 admin/
 /admin/
+
+assets/dist/admin.css.map
+assets/dist/admin.css
