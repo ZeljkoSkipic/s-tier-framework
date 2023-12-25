@@ -31,6 +31,15 @@ function stier_pingback_header() {
 add_action( 'wp_head', 'stier_pingback_header' );
 
 
+// Admin footer modification
+
+function dashboard_footer_admin ()
+{
+    echo '<span id="footer-thankyou">Thank you for developing with <a href="https://stierdev.com/" target="_blank">S Tier Dev</a>. Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span> ';
+}
+
+add_filter('admin_footer_text', 'dashboard_footer_admin');
+
 // ACF Local JSON
 
 function my_acf_json_save_point( $path ) {
