@@ -98,6 +98,21 @@
 	justify-content: center;
 }
 
+@mixin bg-cl {
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+@mixin bg-cr {
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+@mixin bg-c {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 @mixin bg_div {
 	position: absolute;
 	top: 0;

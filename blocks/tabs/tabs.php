@@ -22,7 +22,7 @@ if ( ! empty( $padding) ) {
 }
 
  ?>
-<div <?php echo $anchor; ?> class="<?php echo $class ?>">
+<section <?php echo $anchor; ?> class="<?php echo $class ?>">
 <?php get_template_part('components/background'); ?>
 	<div class="container">
 		<?php get_template_part('components/intro'); ?>
@@ -54,5 +54,5 @@ if ( ! empty( $padding) ) {
 			<?php endwhile; ?>
 		</section>
 	</div>
-</div>
+</section>
 <?php endif; ?>

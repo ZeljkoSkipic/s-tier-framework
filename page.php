@@ -11,7 +11,9 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<?php the_content(); ?>
+		<article>
+			<?php the_content(); ?>
+		</article>
 
 	</main><!-- #main -->
 

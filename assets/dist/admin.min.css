@@ -1,12 +1,13 @@
 #wpwrap{background-color:rgba(140,183,180,0.3)}
 body input[type=color],body input[type=date],body input[type=datetime-local],body input[type=datetime],body input[type=email],body input[type=month],body input[type=number],body input[type=password],body input[type=search],body input[type=tel],body input[type=text],body input[type=time],body input[type=url],body input[type=week],body select,body textarea{border:.5px solid #ccbeb4}
 body:not(.folded) #adminmenuwrap{width:205px}
+body:not(.folded) .woocommerce-layout__header{width:calc(100% - 218px)}
 body:not(.folded) #adminmenu{margin-left:5px}
-body:not(.folded) #adminmenu a:not(.wp-has-current-submenu)+.wp-submenu{left:170px}
+body:not(.folded) #adminmenu li:not(.wp-has-current-submenu) .wp-submenu{left:170px}
 body:not(.folded) #adminmenu .wp-has-submenu.wp-not-current-submenu:after{top:13px}
 body:not(.folded) #adminmenu .wp-submenu-head,body:not(.folded) #adminmenu a.menu-top{font-size:14px;border-radius:16px;padding-inline:5%}
-body:not(.folded) #adminmenu a.wp-has-current-submenu{border-radius:10px 10px 0 0;background:#2271b1 !important;color:#fff !important}
-body:not(.folded) #adminmenu a.wp-has-current-submenu .wp-menu-image:before{color:#fff !important}
+body:not(.folded) #adminmenu .wp-has-current-submenu>a{border-radius:10px 10px 0 0;background:#2271b1 !important;color:#fff !important}
+body:not(.folded) #adminmenu .wp-has-current-submenu>a .wp-menu-image:before{color:#fff !important}
 body:not(.folded) #adminmenuback{width:200px}
 body:not(.folded) li.menu-top{border-radius:16px;width:85%;margin-left:7.5% !important}
 body:not(.folded) #collapse-menu{width:85%;margin-left:10%}

@@ -44,5 +44,8 @@
 		"translate": "gulp translate",
 		"styles-rtl": "gulp stylesRTL",
 		"cache-clear": "gulp clearCache"
+	},
+	"dependencies": {
+		"gulp-dart-sass": "^1.1.0"
 	}
 }

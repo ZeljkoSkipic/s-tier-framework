@@ -102,10 +102,7 @@ const zipIgnoreGlob = [
 	'!./assets/css',
 	'!./assets/img/raw/**/*',
 	'!./assets/img/raw',
-	`!${imgSRC}`,
-	`!${styleSRC}`,
-	`!${jsCustomSRC}`,
-	`!${jsVendorSRC}`
+	`!${imgSRC}`
 ];
 
 // >>>>> Translation options.
