@@ -1,0 +1,69 @@
+body.login {
+	background: #adf7bd;
+}
+div#login {
+	width: 500px;
+	max-width: 90%;
+}
+.login form#loginform {
+	filter: drop-shadow(5px 5px 10px rgba(33, 33, 33, .1));
+	border: none;
+	border-radius: 12px;
+	padding: 3rem 2rem;
+}
+.login form#loginform label {
+	width: 100%;
+	text-align: center;
+}
+.login form#loginform p.forgetmenot label {
+	width: unset;
+}
+.login form input.input {
+	background: #f6f6f6;
+	padding: 1rem 2rem;
+	text-align: center;
+	border-color: transparent;
+	transition: .5s all;
+	outline: none;
+}
+
+.login .button.wp-hide-pw {
+	height: 4rem;
+}
+.login form input.input:focus {
+	background: #fff;
+	border-bottom-color: #18191b;
+	box-shadow: none;
+}
+#login h1 a, .login h1 a {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-bottom: 10px;
+	width: 100%;
+	max-width: 300px;
+	height: 120px;
+}
+.login form p.forgetmenot {
+	width: 100%;
+	text-align: center;
+}
+#login form p.submit {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.login .button-primary#wp-submit {
+	background: #18191b;
+	border: none;
+	text-transform: uppercase;
+	padding: .5rem 4rem;
+	margin-top: 2rem;
+	transition: .3s all;
+}
+.login .button-primary#wp-submit:hover {
+	opacity: .8;
+}
+#login #nav, #login #backtoblog {
+	text-align: center;
+}

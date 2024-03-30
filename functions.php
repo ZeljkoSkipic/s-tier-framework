@@ -62,16 +62,21 @@ add_action( 'after_setup_theme', 'stier_setup' );
 // Enqueue scripts and styles.
 
 function stier_scripts() {
-	$css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.css'));
-	$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.js'));
+	$css_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.min.css'));
+	$js_cache_buster = date("YmdHi", filemtime( get_stylesheet_directory() . '/assets/dist/theme.min.js'));
 
 	wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/assets/dist/theme.min.css', array(), $css_cache_buster, 'all' );
-	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/dist/theme.js', array('jquery'), $js_cache_buster );
+	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/dist/theme.min.js', array('jquery'), $js_cache_buster );
 
 	wp_enqueue_style( 'stier-style', get_stylesheet_uri(), array(), '1.0.0' );
 }
 add_action( 'wp_enqueue_scripts', 'stier_scripts' );
 
+// Login Styles
+function stier_login_styles() {
+    wp_enqueue_style( 'login-style', get_template_directory_uri() . '/assets/dist/wp-login.css' );
+}
+add_action('login_head', 'stier_login_styles');
 
 // Admin Styles
 function stier_admin_styles() {

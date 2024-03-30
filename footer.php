@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer_inner container">
 			<div class="col copy">
-				© 2023 S-Tier Dev Digital Agency
+				© 2024 S-Tier Dev Digital Agency
 			</div>
 		</div>
 	</footer>
@@ -27,6 +27,6 @@
        ||    (__) <(What are you looking for?)
        ||w--||
 -->
-<?php the_field('body_bottom_script', 'option'); ?> <!-- Body Bottom External Code -->
+<?php echo get_field('body_bottom_script', 'option'); ?> <!-- Body Bottom External Code -->
 </body>
 </html>

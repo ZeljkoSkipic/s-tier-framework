@@ -21,14 +21,14 @@
 	Insert site main color
 	<meta name="theme-color" content="#45eba5" />
 	-->
-	<?php the_field('head_script', 'option'); ?> <!-- Head External Code -->
+	<?php echo get_field('head_script', 'option'); ?> <!-- Head External Code -->
 	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<?php the_field('body_top_script', 'option'); ?> <!-- Body Top External Code -->
+<?php echo get_field('body_top_script', 'option'); ?> <!-- Body Top External Code -->
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'stier' ); ?></a>
@@ -48,7 +48,7 @@
 
 	</div>
 	<header id="masthead" class="header-main">
-		<div class="container">
+		<div class="header-main_inner container">
 			<figure class="site-logo">
 				<?php
 				the_custom_logo(); ?>

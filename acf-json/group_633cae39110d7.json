@@ -1,6 +1,6 @@
 {
     "key": "group_633cae39110d7",
-    "title": "Component: Title",
+    "title": "Component: Advanced Title",
     "fields": [
         {
             "key": "field_633cae4546452",
@@ -98,5 +98,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694908342
+    "modified": 1711822300
 }

@@ -36,3 +36,32 @@ body {
 .st_block {
 	position: relative;
 }
+
+
+.error404 {
+	article {
+		text-align: center;
+		img {
+			width: auto;
+			max-width: 30rem;
+		}
+		h1 {
+			font-size: 20rem;
+		}
+		h2 {
+			font-size: 5rem;
+		}
+		.text404 {
+			font-size: 30px;
+			margin-block: var(--space-4);
+		}
+		@include mob-only {
+			h1 {
+				font-size: 15rem;
+			}
+			.text404 {
+				font-size: 25px;
+			}
+		}
+	}
+}

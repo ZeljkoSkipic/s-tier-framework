@@ -30,6 +30,35 @@ function stier_pingback_header() {
 }
 add_action( 'wp_head', 'stier_pingback_header' );
 
+
+// Login Screen
+
+function get_custom_logo_url() {
+    $custom_logo_id = get_theme_mod('custom_logo');
+    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+    if (has_custom_logo()) {
+        return $logo[0];
+    } else {
+        return ''; // Return an empty string or a default logo URL if no custom logo is set
+    }
+}
+
+function custom_login_logo() {
+    $logo_url = get_custom_logo_url();
+    if ($logo_url != '') {
+        ?>
+        <style type="text/css">
+            #login h1 a, .login h1 a {
+                background-image: url(<?php echo esc_url($logo_url); ?>);
+
+            }
+        </style>
+        <?php
+    }
+}
+add_action('login_enqueue_scripts', 'custom_login_logo');
+
 // Admin footer modification
 
 function dashboard_footer_admin () {
@@ -82,4 +111,5 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/../blocks/accordion' );
 	register_block_type( __DIR__ . '/../blocks/tabs' );
 	register_block_type( __DIR__ . '/../blocks/info-boxes' );
+	register_block_type( __DIR__ . '/../blocks/basic-section' );
 }

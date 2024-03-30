@@ -38,7 +38,7 @@
 	.header-main {
 		z-index: 9;
 		position: relative;
-		.container {
+		.header-main_inner {
 			@include flex;
 			justify-content: space-between;
 			align-items: center;
