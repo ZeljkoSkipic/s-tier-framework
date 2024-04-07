@@ -1,6 +1,6 @@
 body.login {
-	background: #F5F6F7;
-	background-image: url(../images/login-background-light.jpg);
+	background: #18191B;
+	background-image: url(../images/login-background-dark.jpg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -13,9 +13,9 @@ div#login {
 	box-shadow: 0px 4px 100px 0px #18191B14;
 	border: none;
 	border-radius: 2px;
+	background: rgba(255,255,255, .05);
 	padding: 40px;
 }
-
 .login form#loginform label[for='user_login'], .login form#loginform label[for='user_pass'] {
 	color: #6B7280;
 	text-transform: uppercase;
@@ -27,17 +27,19 @@ div#login {
 	width: unset;
 }
 .login form input.input {
-	background: #F5F6F7;
+	background: rgba(255,255,255, .1);
+
 	border: 1px solid rgba(24, 25, 27, 0.1)!important;
 	transition: .5s all;
 	outline: none;
+	color: #fff;
 }
 
 .login .button.wp-hide-pw {
 	height: 53.59px;
 }
 .login form input.input:focus {
-	background: #fff;
+	background: rgba(255,255,255, .3);
 	border-bottom-color: #18191b;
 	box-shadow: none;
 }
@@ -61,6 +63,7 @@ div#login {
 }
 .login form p.forgetmenot label {
 	display: flex;
+	color: #ADF7BD;
 	cursor: pointer;
 }
 .login form p.forgetmenot label:before {
@@ -93,7 +96,6 @@ div#login {
 	text-transform: uppercase;
 	margin-top: 24px;
 	transition: .3s all;
-
 }
 .login .button-primary#wp-submit:hover {
 	opacity: .8;
@@ -101,11 +103,9 @@ div#login {
 #login #nav, #login #backtoblog {
 	text-align: center;
 }
-
 #login #nav a, #login #backtoblog a {
-	color: #6B7280
+	color: #ADF7BD;
 }
-
 #login #nav a:hover, #login #backtoblog a:hover {
 	text-decoration: underline;
 }
@@ -120,7 +120,6 @@ div#login {
 	}
 	.login .button-primary#wp-submit {
 		padding: .5rem 4rem;
-		font-size: 14px;
 	}
 }
 
