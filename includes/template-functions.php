@@ -33,6 +33,11 @@ add_action( 'wp_head', 'stier_pingback_header' );
 
 // Login Screen
 
+add_filter( 'login_headerurl', 'my_custom_login_url' );
+function my_custom_login_url($url) {
+    return '/';
+}
+
 function get_custom_logo_url() {
     $custom_logo_id = get_theme_mod('custom_logo');
     $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
