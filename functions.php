@@ -138,3 +138,54 @@ add_action('init', function () {
         remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
     }
 });
+
+/*
+
+add_action('wp_dashboard_setup', 'stier_dashboard_widgets');
+
+function stier_dashboard_widgets() {
+    wp_add_dashboard_widget(
+        'stier_dashboard_widget',        // Widget slug.
+        'Welcome to your S-Tier website',        // Title.
+        'stier_dashboard_widget_content' // Display function.
+    );
+}
+
+
+function stier_dashboard_widget_content() {
+    echo "Hello, this is my custom dashboard widget!";
+    // You can include HTML and PHP here to display whatever you want.
+}
+ */
+
+
+ new \Kirki\Panel(
+	'panel_id',
+	[
+		'priority'    => 10,
+		'title'       => esc_html__( 'Kako hoces', 'kirki' ),
+		'description' => esc_html__( 'My Panel Description.', 'kirki' ),
+	]
+);
+
+
+new \Kirki\Section(
+	'section_id',
+	[
+		'title'       => esc_html__( 'My Section', 'kirki' ),
+		'description' => esc_html__( 'My Section Description.', 'kirki' ),
+		'panel'       => 'panel_id',
+		'priority'    => 160,
+	]
+);
+
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'it_can_be_whatever',
+		'label'    => esc_html__( 'Text Control', 'kirki' ),
+		'section'  => 'section_id',
+		'default'  => esc_html__( 'This is a default value', 'kirki' ),
+		'priority' => 10,
+	]
+);

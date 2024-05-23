@@ -29,7 +29,7 @@
 
 
 
-	@media (min-width: 797.6px) /* Insert the same width as limbo-min variable */ {
+	@media (min-width: 833.6px) /* Insert the same width as limbo-min variable */ {
 	  --site-width: 90%;
 	  --body-size: 18px;
 	}
@@ -45,8 +45,8 @@
 
   $mob-max: 479.5px;
   $tab-min: 479.6px;
-  $tab-max: 797.5px;
-  $limbo-min: 797.6px;
+  $tab-max: 833.5px;
+  $limbo-min: 833.6px;
   $limbo-max: 1199.5px;
   $desk-min: 1199.6px;
   $sm-desk-max: 1360.5px;

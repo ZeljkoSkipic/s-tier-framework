@@ -73,3 +73,7 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
+
+<?php $text_value = get_theme_mod( 'it_can_be_whatever', 'DEFAULT VALUE'); ?>
+
+ <div><?php echo $text_value; ?></div>
