@@ -29,12 +29,12 @@
 
 
 
-	@media (min-width: 833.6px) /* Insert the same width as limbo-min variable */ {
+	@media (min-width: 834.6px) /* Insert the same width as limbo-min variable */ {
 	  --site-width: 90%;
 	  --body-size: 18px;
 	}
 
-	@media (max-width: 797.5px) /* Insert the same width as tab-max variable */ {
+	@media (max-width: 834.5px) /* Insert the same width as tab-max variable */ {
 	  --site-width: calc(100% - 50px);
 	  --body-size: 17px;
 	}
@@ -43,16 +43,16 @@
 
   // Breakpoint sizes - Associated with Breakpoints in Mixins.scss
 
-  $mob-max: 479.5px;
-  $tab-min: 479.6px;
-  $tab-max: 833.5px;
-  $limbo-min: 833.6px;
+  $mob-max: 480.5px;
+  $tab-min: 480.6px;
+  $tab-max: 834.5px;
+  $limbo-min: 834.6px;
   $limbo-max: 1199.5px;
   $desk-min: 1199.6px;
   $sm-desk-max: 1360.5px;
   $md-desk-min: 1360.6px;
-  $md-desk-max: 1659.5px;
-  $lg-desk-min: 1659.6px;
+  $md-desk-max: 1660.5px;
+  $lg-desk-min: 1660.6px;
   $huge-desk-min: 2560px;
 
 
