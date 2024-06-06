@@ -34,7 +34,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'stier' ); ?></a>
 	<div class="top_bar">
 		<div class="top_bar_inner container">
-		<?php esc_html_e(the_field('top_bar_message', 'option') ) ?>
+			<?php echo wp_kses_post( get_field('top_bar_message', 'option') ); ?>
 		<?php
 		$cta_link = get_field('cta_link', 'option');
 		if( $cta_link ):
@@ -73,7 +73,3 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-
-<?php $text_value = get_theme_mod( 'it_can_be_whatever', 'DEFAULT VALUE'); ?>
-
- <div><?php echo $text_value; ?></div>

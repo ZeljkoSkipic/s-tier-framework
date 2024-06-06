@@ -34,6 +34,20 @@
 	font-display: swap;
 }
 
-* {
+body {
+	@include limbo-min {
+		font-size: 20px;
+	}
+	@include tab-max {
+		font-size: 16px;
+	}
 	font-family: Primary, sans-serif;
+	color: var(--b-color);
+	line-height: var(--body-line-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Secondary, sans-serif;
+	color: var(--t-color);
+	line-height: var(--title-line-height);
 }

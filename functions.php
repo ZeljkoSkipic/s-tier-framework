@@ -84,6 +84,10 @@ function stier_admin_styles() {
 }
 add_action( 'admin_enqueue_scripts', 'stier_admin_styles' );
 
+// S-Tier Icon Field for ACF
+
+require_once get_template_directory() . '/includes/theme-icons/init.php';
+
 // Custom template tags for this theme.
 
 require get_template_directory() . '/includes/template-tags.php';

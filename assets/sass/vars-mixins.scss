@@ -13,10 +13,11 @@
 	--space-3: 6rem;
 	--space-4: 3rem;
 
-	--title-space-1: 6rem;
-	--title-space-2: 4rem;
-	--title-space-3: 3rem;
-	--title-space-4: 2rem;
+	--t-space-1: 6rem;
+	--t-space-2: 4rem;
+	--t-space-3: 3rem;
+	--t-space-4: 2rem;
+
 
 	--color-1: #45eba5;
 	--color-2: #212121;
@@ -27,16 +28,16 @@
 
 	--st: .3s all;
 
+	--title-line-height: 1.2;
+	--body-line-height: 1.7;
 
 
 	@media (min-width: 834.6px) /* Insert the same width as limbo-min variable */ {
 	  --site-width: 90%;
-	  --body-size: 18px;
 	}
 
 	@media (max-width: 834.5px) /* Insert the same width as tab-max variable */ {
 	  --site-width: calc(100% - 50px);
-	  --body-size: 17px;
 	}
 	--site-max-width: 1440px;
   }
@@ -341,19 +342,19 @@
 // Title Spacings
 
 .t_space_1 {
-	margin-bottom: var(--title-space-1);
+	margin-bottom: var(--t-space-1);
 }
 
 .t_space_2 {
-	margin-bottom: var(--title-space-2);
+	margin-bottom: var(--t-space-2);
 }
 
 .t_space_3 {
-	margin-bottom: var(--title-space-3);
+	margin-bottom: var(--t-space-3);
 }
 
 .t_space_4 {
-	margin-bottom: var(--title-space-4);
+	margin-bottom: var(--t-space-4);
 }
 
 

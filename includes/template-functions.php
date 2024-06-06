@@ -64,6 +64,23 @@ function custom_login_logo() {
 }
 add_action('login_enqueue_scripts', 'custom_login_logo');
 
+
+// Make ACF Imposible to deactivate
+
+add_filter('user_has_cap', 'prevent_plugin_deactivation', 10, 3);
+
+function prevent_plugin_deactivation($allcaps, $cap, $args) {
+    $plugin_file = 'advanced-custom-fields-pro/acf.php';
+
+    if (isset($args[2]) && $args[2] == $plugin_file) {
+        if ($args[0] == 'deactivate_plugin') {
+            $allcaps[$cap[0]] = false;
+        }
+    }
+    return $allcaps;
+}
+
+
 // Admin footer modification
 
 function dashboard_footer_admin () {

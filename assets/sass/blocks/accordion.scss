@@ -2,11 +2,6 @@
 	@include bs;
 	margin-bottom: 2rem;
 	@include br1;
-	&:not(.open) {
-	  .st_accordion-body {
-		display: none;
-	  }
-	}
 	.st_accordion-header {
 		font-size: var(--font-size-4);
 		color: var(--color-2);

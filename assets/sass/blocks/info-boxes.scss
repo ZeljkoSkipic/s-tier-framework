@@ -5,5 +5,14 @@
 			aspect-ratio: 4 / 3;
 			margin-bottom: var(--space-4);
 		}
+		svg {
+			margin-bottom: var(--space-4);
+		}
+		.st_col {
+			@include flex-col;
+			.btns {
+				margin-top: auto;
+			}
+		}
 	}
 }

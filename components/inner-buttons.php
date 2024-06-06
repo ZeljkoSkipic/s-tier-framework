@@ -1,7 +1,7 @@
 <?php
-$btn1 = get_field('button_1');
-$btn2 = get_field('button_2');
-$btn3 = get_field('button_3');
+$btn1 = get_sub_field('button_1');
+$btn2 = get_sub_field('button_2');
+$btn3 = get_sub_field('button_3');
 
 
 if( !empty($btn1 || $btn2 || $btn3 ) ) { ?>

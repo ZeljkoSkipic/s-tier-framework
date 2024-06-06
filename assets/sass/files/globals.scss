@@ -1,17 +1,22 @@
-body {
-	font-family: Arial, Helvetica, sans-serif;
-}
-
 .container {
 	width: var(--site-width);
 	max-width: var(--site-max-width);
 	margin-inline: auto;
 }
 
+// Fix user agent spacings
+
+h1, h2  {
+	margin-bottom: var(--t-space-1);
+}
+
+h3, h4, h5, h6 {
+	margin-bottom: var(--t-space-2);
+}
+
 .title-1 {
 	font-size: var(--font-size-1);
 }
-
 
 .title-2 {
 	font-size: var(--font-size-2);

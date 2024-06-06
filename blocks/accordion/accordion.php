@@ -21,7 +21,7 @@ if ( have_rows('accordion') ) :
 	}
 
 ?>
-<section id="<?php echo $anchor; ?>"class="<?php echo $class ?>">
+<section id="<?php echo $anchor; ?>" class="<?php echo $class ?>">
 <?php get_template_part('components/background'); ?>
 	<div class="st_accordion_inner container">
 	<?php get_template_part('components/intro');
