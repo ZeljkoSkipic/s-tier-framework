@@ -119,6 +119,30 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "key": "field_665c962be5baf",
+                    "label": "Select Icon or Upload Image",
+                    "name": "icons_test",
+                    "aria-label": "",
+                    "type": "s_tier_icons",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63760cb08aafd",
+                                "operator": "==empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "font_size": 14,
+                    "parent_repeater": "field_63760bb52814b"
+                },
+                {
                     "key": "field_63760cb08aafd",
                     "label": "Image",
                     "name": "ib_image",
@@ -142,23 +166,6 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_63760bb52814b"
-                },
-                {
-                    "key": "field_665c962be5baf",
-                    "label": "Info box Icon",
-                    "name": "icons_test",
-                    "aria-label": "",
-                    "type": "s_tier_icons",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "font_size": 14,
                     "parent_repeater": "field_63760bb52814b"
                 },
                 {
@@ -367,5 +374,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717695427
+    "modified": 1719590763
 }

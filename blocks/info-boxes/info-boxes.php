@@ -54,11 +54,18 @@ if ( ! empty( $padding) ) {
 
                 <div class="st_col column">
 					<?php
-					if( $ib_image ) {
-						echo wp_get_attachment_image( $ib_image, $size, "", array( "class" => "ib_image" ) );
-					}
+					if( $ib_image ) { ?>
+					<figure class="ib_image">
+						<?php echo wp_get_attachment_image( $ib_image, $size, "", array( "class" => "ib_image" ) ); ?>
+					</figure>
+
+					<?php } else { ?>
+						<figure class="ib_icon">
+							<?php echo $icon; ?>
+						</figure>
+					<?php }
 					if( $icon ) {
-						echo $icon;
+
 					} ?>
                    <h3 class="st_col_title"><?php echo $title; ?></h3>
                     <div class="st_col_text">

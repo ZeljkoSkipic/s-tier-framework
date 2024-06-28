@@ -1,4 +1,5 @@
-body,#wpwrap{background-color:rgba(140,183,180,0.3)}
+body{background-color:rgba(140,183,180,0.5)}
+.editor-preview-dropdown{display:none}
 body input[type=color],body input[type=date],body input[type=datetime-local],body input[type=datetime],body input[type=email],body input[type=month],body input[type=number],body input[type=password],body input[type=search],body input[type=tel],body input[type=text],body input[type=time],body input[type=url],body input[type=week],body select,body textarea{border:.5px solid #ccbeb4}
 body:not(.folded) #adminmenuwrap{width:205px}
 body:not(.folded) .woocommerce-layout__header{width:calc(100% - 218px)}
@@ -25,15 +26,13 @@ body.folded #collapse-button .collapse-button-icon{width:50px;margin-left:2.5px}
 #wpadminbar{border-radius:16px 16px 0 0;background-color:#171821}
 #wpcontent,#wpfooter{margin-left:220px}
 #adminmenu,#adminmenuwrap{background-color:transparent}
-#adminmenu{background-color:#171821;border-radius:16px;min-height:calc(100vh - 60px);padding-top:8px;padding-bottom:8px;margin:6px 0}
+#adminmenu{background-color:#18191b;border-radius:16px;min-height:calc(100vh - 60px);padding-top:8px;padding-bottom:8px;margin:6px 0}
 #adminmenuback{border-radius:16px;background:#171821;-webkit-backdrop-filter:blur(80px);backdrop-filter:blur(80px);top:30px;bottom:30px;display:none}
 li.menu-top{border-radius:16px}
 .menu-top{margin-top:3px !important}
 .menu-top>a{padding-block:5px !important}
-.wp-has-submenu .wp-menu-image:before{color:#87888c !important}
 #adminmenu{width:200px}
 #adminmenu li.wp-menu-separator{display:none}
-#adminmenu a{color:#87888c;font-weight:500}
 #adminmenu .wp-has-current-submenu .wp-submenu{background-color:#30a0fc;border-radius:0 0 10px 10px;width:100%}
 #adminmenu .wp-has-current-submenu .wp-submenu li a{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:20% !important;color:#fff !important;font-weight:400}
 #adminmenu .wp-has-current-submenu .wp-submenu li a.current{font-weight:600}
