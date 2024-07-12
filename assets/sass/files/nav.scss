@@ -113,6 +113,7 @@
 					transform: rotate(45deg);
 					cursor: pointer;
 					transition: var(--st);
+					pointer-events: none;
 					svg {
 					stroke: var(--color-1);
 					}

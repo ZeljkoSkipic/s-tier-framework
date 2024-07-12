@@ -157,7 +157,7 @@ body{font-size:20px}
 .main-navigation #primary-menu>li.menu-item-has-children a{padding-right:5px;font-size:14px}
 .main-navigation #primary-menu>li>a{font-size:16px}
 .main-navigation #primary-menu>li a{color:var(--t-color)}
-.main-navigation #primary-menu>li .sub-menu-trigger{top:4px;position:relative;right:0;-webkit-transform:rotate(45deg);transform:rotate(45deg);cursor:pointer;-webkit-transition:var(--st);transition:var(--st)}
+.main-navigation #primary-menu>li .sub-menu-trigger{top:4px;position:relative;right:0;-webkit-transform:rotate(45deg);transform:rotate(45deg);cursor:pointer;-webkit-transition:var(--st);transition:var(--st);pointer-events:none}
 .main-navigation #primary-menu>li .sub-menu-trigger svg{stroke:var(--color-1)}
 .main-navigation #primary-menu>li:hover .sub-menu-trigger{-webkit-transform:rotate(90deg);transform:rotate(90deg);top:1px;right:4px}
 .main-navigation #primary-menu>li:hover .sub-menu{opacity:1;left:-2rem}
