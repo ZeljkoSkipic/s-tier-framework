@@ -1,4 +1,4 @@
-body{background-color:rgba(140,183,180,0.5)}
+body{background-color:#c5dbd9}
 .editor-preview-dropdown{display:none}
 body input[type=color],body input[type=date],body input[type=datetime-local],body input[type=datetime],body input[type=email],body input[type=month],body input[type=number],body input[type=password],body input[type=search],body input[type=tel],body input[type=text],body input[type=time],body input[type=url],body input[type=week],body select,body textarea{border:.5px solid #ccbeb4}
 body:not(.folded) #adminmenuwrap{width:205px}

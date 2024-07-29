@@ -1,4 +1,4 @@
-:root{--font-size-1:5rem;--font-size-2:4.5rem;--font-size-3:4rem;--font-size-4:3rem;--font-size-5:2.5rem;--font-size-6:20px;--line-height:1.2;--space-1:10rem;--space-2:8rem;--space-3:6rem;--space-4:3rem;--t-space-1:6rem;--t-space-2:4rem;--t-space-3:3rem;--t-space-4:2rem;--color-1:#45eba5;--color-2:#212121;--color-3:#eb5e44;--color-4:#33d4be;--bg-1:#f7f7f7;--st:.3s all;--title-line-height:1.2;--body-line-height:1.7;--site-max-width:1440px}
+:root{--font-size-1:5rem;--font-size-2:4.5rem;--font-size-3:4rem;--font-size-4:3rem;--font-size-5:2.5rem;--font-size-6:20px;--space-1:10rem;--space-2:8rem;--space-3:6rem;--space-4:3rem;--t-space-1:6rem;--t-space-2:4rem;--t-space-3:3rem;--t-space-4:2rem;--color-1:#45eba5;--color-2:#212121;--color-3:#eb5e44;--color-4:#33d4be;--bg-1:#f7f7f7;--st:.3s all;--title-line-height:1.2;--body-line-height:1.7;--site-max-width:1440px}
 .space_1{padding-top:var(--space-1);padding-bottom:var(--space-1)}
 .space_2{padding-top:var(--space-2);padding-bottom:var(--space-2)}
 .space_3{padding-top:var(--space-3);padding-bottom:var(--space-3)}
