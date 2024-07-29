@@ -58,7 +58,6 @@ function stier_setup() {
 }
 add_action( 'after_setup_theme', 'stier_setup' );
 
-
 // Enqueue scripts and styles.
 
 function stier_scripts() {
@@ -83,6 +82,9 @@ function stier_admin_styles() {
 	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css' );
 }
 add_action( 'admin_enqueue_scripts', 'stier_admin_styles' );
+
+// Include Custom Menu Walker
+require get_template_directory() . '/includes/custom-menu-walker.php';
 
 // S-Tier Icon Field for ACF
 
