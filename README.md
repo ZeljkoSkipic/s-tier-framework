@@ -2,7 +2,7 @@
 
 # S-Tier Dev Framework
 
-	Built as an workflow streamlining and optimization tool | Evolved to much more
+**Built as an workflow streamlining and optimization tool | Evolved to much more**
 
 ACF Gutenberg Blocks
 
