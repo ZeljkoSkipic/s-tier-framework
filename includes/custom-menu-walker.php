@@ -3,8 +3,11 @@ class CustomMenuWalker extends Walker_Nav_Menu
 {
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
     {
+		// Check if the item should open in a new tab
+        $target = !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+
         $output .= "<li class='" .  implode(" ", (array) $item->classes) . "'>";
-        $output .= '<a href="' . $item->url . '">';
+        $output .= '<a href="' . esc_url($item->url) . '"' . $target . '>';
         $output .= $item->title;
         $output .= '</a>';
         if (in_array('menu-item-has-children', (array) $item->classes)) {
