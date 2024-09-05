@@ -2,6 +2,18 @@
 
 .block_bg {
 	@include bg_div;
+	.bg_img:not(:only-of-type) {
+		&.desk_bg {
+			@include tab-max {
+				display: none;
+			}
+		}
+	}
+	.mob_bg {
+		@include limbo-min {
+			display: none;
+		}
+	}
 }
 
 .intro_text {

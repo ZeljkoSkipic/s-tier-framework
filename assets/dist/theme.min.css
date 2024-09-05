@@ -115,6 +115,7 @@ footer .footer_inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-fl
 .posts_grid .grid_item{width:48%}
 }@media(min-width:834.6px){:root{--site-width:90%}
 body{font-size:20px}
+.block_bg .mob_bg{display:none}
 }@media(min-width:834.6px) and (max-width:1199.5px){html{font-size:7px}
 }@media(min-width:1199.6px) and (max-width:1360.5px){html{font-size:7px}
 }@media(min-width:1199.6px){.hamburger{display:none}
@@ -167,6 +168,7 @@ body{font-size:20px}
 .menu-toggle:checked+div:after{top:0;-webkit-transform:rotate(135deg);transform:rotate(135deg);background:black}
 }@media(max-width:834.5px){:root{--site-width:calc(100% - 50px)}
 body{font-size:16px}
+.block_bg .bg_img:not(:only-of-type).desk_bg{display:none}
 .tab-cols-1 .st_info_boxes_inner{grid-template-columns:1fr}
 .tab-cols-2 .st_info_boxes_inner{grid-template-columns:repeat(2,1fr)}
 .tab-cols-3 .st_info_boxes_inner{grid-template-columns:repeat(3,1fr)}

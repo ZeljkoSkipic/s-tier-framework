@@ -16,7 +16,7 @@ the_post(); ?>
 	<article class="post_main">
 		<?php
 		the_title( '<h1 class="title-1">', '</h1>' );
-		the_field('intro');
+		echo wp_kses_post( get_field('intro') );
 		echo get_the_date();
 		the_content(); ?>
 	</article>
