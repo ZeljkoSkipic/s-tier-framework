@@ -58,44 +58,77 @@
 	.main-navigation {
 		#primary-menu {
 			@include flex;
+			@include clean-list;
 			ul {
 				&.sub-menu {
-					float: left;
-					position: absolute;
-					top: 100%;
-					left: -999em;
-					z-index: 99;
-					min-width: 200px;
-					width: fit-content;
-					display: flex;
-					flex-direction: column;
 					background-color: #fff;
-					padding: 2rem;
+					min-width: 200px;
+					filter: drop-shadow(2.5px 2.5px 5px rgba(0, 0, 0, .05));
+					border-radius: 4px;
+					@include st;
+					position: absolute;
 					opacity: 0;
-					transition: opacity .3s;
-					filter: drop-shadow(2.5px 2.5px 5px rgba(0, 0, 0, 0.05));
+					display: block;
+					pointer-events: none;
+					transform: translateY(30px);
+
 					li:not(:last-child) {
-					a {
-						margin-bottom: .5rem;
+						a {
+							margin-bottom: .5rem;
+						}
 					}
+					li {
+						padding: .5rem 1rem .5rem 2rem;
+						&:first-child {
+							padding-top: 1rem;
+						}
+						&:last-child {
+							padding-bottom: 1rem;
+						}
+						a {
+							width: 100%;
+							display: flex;
+						}
+
+					}
+
+				}
+				ul {
+					left: 100%;
+					top: 0;
+					margin-left: 1px;
+					ul {
+						left: unset;
+						right: 100%;
+						top: 0;
+						margin-left: 1px;
 					}
 				}
 			}
-			> li {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+			> li > .sub-menu {
+				top: 100%;
+			}
+			.menu-item-has-children {
 				position: relative;
-				padding-block: 1rem;
+				display: flex;
+				align-items: center;
+				a {
+					text-decoration: none;
+
+				}
+				&:hover>ul.sub-menu {
+					opacity: 1;
+					transform: translateY(0);
+					pointer-events: all;
+				}
+			}
+			> li {
 				&:not(:last-child) {
 					margin-right: 6rem;
 				}
-				&.account {
-					order: 1;
-				}
 				&.menu-item-has-children {
 					margin-right: 4.9rem;
-					a {
+					li a {
 						padding-right: 5px;
 						font-size: 14px;
 					}
@@ -107,27 +140,33 @@
 					color: var(--t-color);
 				}
 				.sub-menu-trigger {
-					top: 4px;
-					position: relative;
-					right: 0;
+					float: right;
+					display: flex;
 					transform: rotate(45deg);
-					cursor: pointer;
-					transition: var(--st);
+					margin-left: 1rem;
 					pointer-events: none;
+					cursor: pointer;
+					@include st;
 					svg {
-					stroke: var(--color-1);
+						stroke: var(--color-1);
 					}
 				}
 			}
-			> li:hover {
-				.sub-menu-trigger{
+			li li:hover {
+				> .sub-menu-trigger {
+					transform: rotate(0deg);
+				}
+			}
+			li li li:hover {
+				> .sub-menu-trigger {
+					transform: rotate(180deg);
+				}
+			}
+			li:hover {
+				> .sub-menu-trigger {
 					transform: rotate(90deg);
 					top: 1px;
 					right: 4px;
-				}
-				.sub-menu {
-					opacity: 1;
-					left: -2rem;
 				}
 			}
 		}
