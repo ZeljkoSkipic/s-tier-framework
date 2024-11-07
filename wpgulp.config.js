@@ -97,12 +97,7 @@ const zipIgnoreGlob = [
 	'!./phpcs.xml.dist',
 	'!./vscode',
 	'!./package.json',
-	'!./package-lock.json',
-	'!./assets/css/**/*',
-	'!./assets/css',
-	'!./assets/img/raw/**/*',
-	'!./assets/img/raw',
-	`!${imgSRC}`
+	'!./package-lock.json'
 ];
 
 // >>>>> Translation options.

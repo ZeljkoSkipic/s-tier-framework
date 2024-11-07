@@ -1,0 +1,69 @@
+.wpforms-container {
+	.wpforms-field {
+		.wpforms-field-label {
+			font-size: 18px;
+		}
+		input, textarea, select {
+			border-width: 0 0 1px 0;
+			font-size: 18px;
+			padding: 1.5rem 1rem 1.5rem calc(2rem + 24px);
+			background-position: top 1.3rem left 1rem;
+			background-repeat: no-repeat;
+			background-size: 24px;
+			background-image: url(../icons/contact/file-text.svg);
+			@include st;
+			@include mob-only {
+				font-size: 16px;
+			}
+			option {
+				font-size: 16px;
+			}
+			&:focus, &.wpforms-valid {
+				outline: none;
+				border-color: var(--color-1);
+			}
+			&.wpforms-error {
+				border-width: 0 0 1px 0!important;
+			}
+			&::placeholder {
+				font-size: 16px;
+			}
+		}
+		select {
+			cursor: pointer;
+			background-image: url(../icons/contact/chevron-down.svg);
+			padding: 1.5rem calc(2rem + 24px) 1.5rem 1rem;
+			background-position: top 1.3rem right 1rem;
+		}
+		.wpforms-error[role="alert"] {
+			font-size: 12px
+		}
+
+		.wpforms-field-name-first, .wpforms-field-name-last {
+			background-image: url(../icons/contact/user.svg);
+		}
+		input[type="email"] {
+			background-image: url(../icons/contact/mail.svg);
+		}
+		input[type="tel"] {
+			background-image: none;
+		}
+		textarea {
+			background-image: url(../icons/contact/pencil.svg);
+		}
+		.wpforms-field-address-address1, .wpforms-field-address-address2 {
+			background-image: url(../icons/contact/map-pin.svg);
+		}
+		.wpforms-datepicker {
+			background-image: url(../icons/contact/calendar.svg);
+		}
+		.wpforms-timepicker {
+			background-image: url(../icons/contact/clock.svg);
+		}
+	}
+
+	.wpforms-submit {
+		@include btn-1;
+		cursor: pointer;
+	}
+}

@@ -4,13 +4,15 @@
 @import 'vendor/fonts';
 
 @import 'files/globals';
+@import 'files/forms';
 @import 'components';
 @import 'files/archive';
 
-// @import 'blocks/accordion';
-// @import 'blocks/tabs';
-// @import 'blocks/info-boxes';
-// @import 'blocks/basic-section';
+@import 'blocks/accordion';
+@import 'blocks/tabs';
+@import 'blocks/info-boxes';
+@import 'blocks/basic-section';
+@import 'blocks/contact';
 
 @import 'files/nav';
 @import 'files/nav-mobile';
