@@ -1,6 +1,6 @@
 {
     "key": "group_638f0e11e5524",
-    "title": "Block: Tabs",
+    "title": "BLOCK: Tabs",
     "fields": [
         {
             "key": "field_638f0e11ea5c6",
@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508d4d82395c",
@@ -74,7 +75,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508d4e92395d",
@@ -175,7 +177,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508d4f32395e",
@@ -298,5 +301,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695077788
+    "modified": 1731840144
 }

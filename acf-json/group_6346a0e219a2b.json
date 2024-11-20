@@ -1,6 +1,6 @@
 {
     "key": "group_6346a0e219a2b",
-    "title": "Block: Accordion",
+    "title": "BLOCK: Accordion",
     "fields": [
         {
             "key": "field_6346f73b8e4b4",
@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508cd0f5fcf0",
@@ -74,7 +75,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508cd1b5fcf1",
@@ -175,7 +177,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508cd265fcf2",
@@ -278,5 +281,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701625320
+    "modified": 1731840158
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_633822375a604",
-    "title": "Block: Basic Section",
+    "title": "BLOCK: Basic Section",
     "fields": [
         {
             "key": "field_6338236211ada",
@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66085a7653fcb",
@@ -157,7 +158,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_66085a9353fcc",
@@ -293,5 +295,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711823823
+    "modified": 1731840154
 }
