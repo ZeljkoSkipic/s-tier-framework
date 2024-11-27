@@ -41,7 +41,7 @@ li.menu-top{border-radius:16px}
 #adminmenu .wp-not-current-submenu .wp-submenu li a{display:-webkit-box;display:-ms-flexbox;display:flex}
 #adminmenu .wp-not-current-submenu .wp-submenu li a:not(:hover){color:#8cb7b4 !important}
 html :where(.wp-block){margin-top:0}
-html :where(.wp-block){width:90%;max-width:1080px}
+html :where(.wp-block){width:90%;max-width:980px}
 body .acf-settings-wrap .acf-postbox,body .acf-settings-wrap #submitdiv{border-top:4px solid;border-radius:8px}
 body .acf-settings-wrap .acf-postbox .inside,body .acf-settings-wrap #submitdiv .inside{background-color:rgba(255,237,224,0.56);border-radius:8px}
 body .acf-settings-wrap .acf-postbox .inside #major-publishing-actions,body .acf-settings-wrap #submitdiv .inside #major-publishing-actions{background-color:unset}

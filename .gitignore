@@ -1,5 +1,7 @@
 node_modules/
 /node_modules/
+tax-filters/
+/tax-filters/
 .editorconfig
 .eslintignore
 .eslintrc.js
@@ -10,3 +12,4 @@ admin/
 
 assets/dist/admin.css.map
 assets/dist/admin.css
+assets/sass/files/tax-filters.scss
