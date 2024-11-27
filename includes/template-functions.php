@@ -134,5 +134,6 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/../blocks/tabs' );
 	register_block_type( __DIR__ . '/../blocks/info-boxes' );
 	register_block_type( __DIR__ . '/../blocks/basic-section' );
+	register_block_type( __DIR__ . '/../blocks/contact' );
 	register_block_type( __DIR__ . '/../blocks/carousel' );
 }

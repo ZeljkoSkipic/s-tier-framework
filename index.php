@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The main template file
  *
@@ -16,29 +15,20 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main space_1">
+	<main id="primary" class="site-main space_1">
 
-	<?php Filter::sidebar(); ?>
+			<?php
+			if ( have_posts() ) : ?>
+				<div class="archive_posts posts_grid container">
+					<?php while ( have_posts() ) :
+						the_post();
+						get_template_part( 'template-parts/content', get_post_type() );
+					endwhile; ?>
+					<?php the_posts_navigation(); ?>
+				</div>
+			<?php endif; ?>
 
-	<div class="archive_posts posts_grid container">
-		<?php
-		if (have_posts()) : ?>
-			<?php while (have_posts()) :
-				the_post();
-				get_template_part('template-parts/content', get_post_type());
-			endwhile; ?>
-
-		<?php else : ?>
-			<p class="filter-no-items"><?php esc_html_e('There are no results for the set filters.', 's-tier') ?></p>
-	</div>
-<?php endif; ?>
-
-<?php Filter::pagination(); ?>
-<div class="loader-wrapper">
-	<div class="loader"></div>
-</div>
-
-</main><!-- #main -->
+	</main><!-- #main -->
 
 <?php
 get_footer();

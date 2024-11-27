@@ -62,6 +62,29 @@
 		}
 	}
 
+	.wpforms-field-checkbox {
+		ul {
+			@include clean-list;
+			li {
+				font-size: 16px;
+				input {
+					display: none;
+				}
+				label {
+					background-image: url(../icons/square.svg);
+					background-size: 18px;
+					background-position: center left;
+					background-repeat: no-repeat;
+					padding-left: 24px;
+					cursor: pointer;
+				}
+				input:checked + label {
+					background-image: url(../icons/check-square.svg);
+				}
+			}
+		}
+	}
+
 	.wpforms-submit {
 		@include btn-1;
 		cursor: pointer;
