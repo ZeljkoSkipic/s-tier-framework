@@ -13,3 +13,5 @@ admin/
 assets/dist/admin.css.map
 assets/dist/admin.css
 assets/sass/files/tax-filters.scss
+assets/js/theme/filter.js
+index.php
