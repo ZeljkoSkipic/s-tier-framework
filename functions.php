@@ -8,6 +8,14 @@
  * @package s-tier
  */
 
+// Init Autoloader for S-tier App
+
+require_once get_template_directory() . '/tax-filters/Filter.php';
+
+// Init Filter class
+
+Filter::init();
+
 
 // Sets up theme defaults and registers support for various WordPress features.
 

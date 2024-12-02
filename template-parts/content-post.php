@@ -6,7 +6,7 @@ $excerpt = get_the_excerpt();
 
 ?>
 
-<div class="grid_item">
+<article class="grid_item">
     <figure class="gi_image">
         <?php if ($image) : ?>
             <a href="<?php the_permalink(); ?>">
@@ -16,7 +16,7 @@ $excerpt = get_the_excerpt();
 	</figure>
 
     <?php if ($title) : ?>
-		<h2 class="heading-secondary">
+		<h2 class="gi_title">
 			<a href="<?php the_permalink(); ?>"><?php echo $title; ?></a>
 		</h2>
     <?php endif; ?>
@@ -28,11 +28,9 @@ $excerpt = get_the_excerpt();
             $trimmed_excerpt = substr($excerpt, 0, strpos($excerpt, ' ', 60));
             $trimmed_excerpt.="...";
         }
-
-          $single_url = "<a class='post-link' href='".get_the_permalink()."'>".__('see more.')." </a>";
-          $excerpt = sprintf("%s %s", $trimmed_excerpt, $single_url );
           ?>
-        <div class="entry-content"> <?php echo $excerpt;  ?> </div>
+        <div class="entry-content"> <?php echo $trimmed_excerpt;  ?> </div>
+		<a href="<?php get_the_permalink(); ?>">Read More</a>
     <?php endif; ?>
 
-</div>
+</article>
