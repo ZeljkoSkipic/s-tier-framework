@@ -6,7 +6,7 @@ $intro_text = get_field('intro_text');
 <?php get_template_part('components/title');
 if( $intro_text ) { ?>
 	<div class="intro_text">
-		<?php echo $intro_text; ?>
+		<?php echo get_field('intro_text') ?>
 	</div>
 <?php } ?>
 

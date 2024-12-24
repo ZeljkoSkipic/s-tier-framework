@@ -1,9 +1,9 @@
 .st_info_boxes {
 	.st_info_boxes_inner {
 		display: grid;
-		gap: 30px;
+		gap: 5rem;
 		.ib_image {
-			aspect-ratio: 4 / 3;
+			aspect-ratio: 1 / 1;
 		}
 		figure {
 			margin-bottom: var(--space-4);

@@ -1,6 +1,6 @@
 {
     "key": "group_63760bb564495",
-    "title": "Block: Info Box Columns",
+    "title": "BLOCK: Info Box Columns",
     "fields": [
         {
             "key": "field_6376148554186",
@@ -135,10 +135,11 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
+                    "allow_in_bindings": 1,
                     "font_size": 14,
                     "parent_repeater": "field_63760bb52814b"
                 },
@@ -150,9 +151,16 @@
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_63760bb52814b",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -165,7 +173,8 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "preview_size": "medium",
+                    "allow_in_bindings": 1,
+                    "preview_size": "thumbnail",
                     "parent_repeater": "field_63760bb52814b"
                 },
                 {
@@ -374,5 +383,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719590763
+    "modified": 1734976110
 }

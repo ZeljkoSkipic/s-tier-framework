@@ -25,10 +25,6 @@ if ( ! empty( $mob_cols ) ) {
     $class .=  ' ' . $mob_cols['value'];
 }
 
-if ( ! empty( $margin ) ) {
-    $class .=  ' ' . $margin['value'];
-}
-
 if ( ! empty( $padding) ) {
     $class .=  ' ' . $padding['value'];
 }

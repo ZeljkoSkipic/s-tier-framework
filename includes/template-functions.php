@@ -112,18 +112,30 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
-// Block Category
+// Block Category and placement of it
 
-add_filter( 'block_categories_all' , function( $categories ) {
+add_filter('block_categories_all', 'stier_block_category');
 
-    // Adding a new category.
-	$categories[] = array(
-		'slug'  => 's-tier',
-		'title' => 'S Tier'
+function stier_block_category($cats)
+{
+
+	// create a new array element with anything as its index
+	$new = array(
+		'stier_block_cat' => array(
+			'slug'  => 's-tier',
+			'title' => 'S Tier'
+		)
 	);
+	$position = 0.1; //
 
-	return $categories;
-} );
+	$cats = array_slice($cats, 0, $position, true) + $new  + array_slice($cats, $position, null, true);
+
+	// reset array indexes
+	$cats = array_values($cats);
+
+	return $cats;
+}
+
 
 
 // Blocks

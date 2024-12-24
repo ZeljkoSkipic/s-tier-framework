@@ -1,24 +1,20 @@
 <?php
 
-if ( have_rows('accordion') ) :
+$padding = get_field_object('padding');
 
-	$padding = get_field_object('padding');
+$anchor = 'st_accordion';
+if ( ! empty( $block['anchor'] ) ) {
+	$anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
+}
 
-	$anchor = 'st_accordion';
-	if ( ! empty( $block['anchor'] ) ) {
-		$anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
-	}
-	$class = 'st_block st_accordion';
-	if ( ! empty( $block['className'] ) ) {
-		$class .= ' ' . $block['className'];
-	}
-	if ( ! empty( $margin ) ) {
-		$class .=  ' ' . $margin['value'];
-	}
+$class = 'st_block st_accordion';
+if ( ! empty( $block['className'] ) ) {
+	$class .= ' ' . $block['className'];
+}
 
-	if ( ! empty( $padding) ) {
-		$class .=  ' ' . $padding['value'];
-	}
+if ( ! empty( $padding) ) {
+	$class .=  ' ' . $padding['value'];
+}
 
 ?>
 <section id="<?php echo $anchor; ?>" class="<?php echo $class ?>">
@@ -55,4 +51,3 @@ if ( have_rows('accordion') ) :
 		<?php endwhile; ?>
 	</div>
 </section>
-<?php endif; ?>

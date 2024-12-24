@@ -1,4 +1,7 @@
 <?php
+
+// Used inside of a repeater(or Group)
+
 $btn1 = get_sub_field('button_1');
 $btn2 = get_sub_field('button_2');
 $btn3 = get_sub_field('button_3');

@@ -8,6 +8,9 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 $class = 'st_block st_carousel_block st_carousel';
+if ( ! empty( $block['className'] ) ) {
+    $class .= ' ' . $block['className'];
+}
 
 ?>
 <section <?php echo $anchor; ?> class="<?php echo $class ?>">
@@ -51,14 +54,3 @@ $class = 'st_block st_carousel_block st_carousel';
 	</div>
 
 </section>
-
-<script>
-
-jQuery(document).ready(function ($) {
-	$('.main-carousel').flickity({
-		// options
-		cellAlign: 'left',
-		contain: true
-	  });
-});
-</script>

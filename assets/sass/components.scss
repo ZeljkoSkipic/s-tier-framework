@@ -16,6 +16,10 @@
 	}
 }
 
+.intro_title:only-child {
+	margin-bottom: var(--space-3);
+}
+
 .intro_text {
 	margin-bottom: var(--space-3);
 }
@@ -24,7 +28,7 @@
 
 .cols-2 {
 	.st_info_boxes_inner {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 1fr;
 	}
   }
   .cols-3 {
@@ -50,7 +54,7 @@
     }
     .tab-cols-2 {
       .st_info_boxes_inner {
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: 1fr 1fr;
 			}
     }
     .tab-cols-3 {
@@ -72,7 +76,7 @@
     }
     .mob-cols-2 {
       .st_info_boxes_inner {
-				grid-template-columns: repeat(2, 1fr);
+				grid-template-columns: 1fr 1fr;
 			}
     }
     .mob-cols-3 {

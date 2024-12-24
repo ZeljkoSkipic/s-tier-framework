@@ -1,7 +1,25 @@
 {
     "key": "group_633cae39110d7",
-    "title": "Component: Advanced Title",
+    "title": "Component: Title",
     "fields": [
+        {
+            "key": "field_6769e8b64afec",
+            "label": "READ AND DELETE THIS",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Depending on the project adjust the fields in it.\r\nIf the project does not require the selection of the Title Tag, remove it.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
         {
             "key": "field_633cae4546452",
             "label": "Title",
@@ -12,12 +30,13 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "75",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -48,34 +67,8 @@
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_6346ffc1d536b",
-            "label": "Title Style",
-            "name": "title_style",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "title-1": "Style 1",
-                "title-2": "Style 2",
-                "title-3": "Style 3"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 1,
             "ajax": 0,
             "placeholder": ""
         }
@@ -98,5 +91,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711822300
+    "modified": 1734994176
 }

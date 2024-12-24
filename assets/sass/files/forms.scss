@@ -69,8 +69,36 @@
 	}
 
 	.wpforms-field-checkbox, .wpforms-field-radio {
+		&.wpforms-list-inline {
+			ul {
+				display: flex;
+				li {
+					margin-right: 3rem
+				}
+			}
+		}
+		&.wpforms-list-2-columns {
+			ul {
+				display: grid;
+				@include tab-min {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+		}
+		&.wpforms-list-3-columns {
+			ul {
+				display: grid;
+				@include limbo-min {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+				@include tab-only {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+		}
 		ul {
 			@include clean-list;
+
 			li {
 				font-size: 16px;
 				input {
