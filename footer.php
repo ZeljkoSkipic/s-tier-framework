@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer_inner container">
 			<div class="col copy">
-				© 2024 S-Tier Dev Digital Agency
+				© <?php echo date('Y'); ?> <?php bloginfo(); ?>
 			</div>
 		</div>
 	</footer>

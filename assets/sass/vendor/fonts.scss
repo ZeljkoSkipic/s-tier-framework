@@ -1,38 +1,25 @@
 @font-face {
-	font-family: Primary;
-	src: url('../fonts/DINNextLTPro-Regular.eot');
-	src: url('../fonts/DINNextLTPro-Regular.eot') format('embedded-opentype'),
-	url('../fonts/DINNextLTPro-Regular.woff2') format('woff2'),
-	url('../fonts/DINNextLTPro-Regular.woff') format('woff'),
-    url('../fonts/DINNextLTPro-Regular.ttf') format('truetype');
+	font-family: Raleway;
+	src: url('../fonts/Raleway-Regular.woff2');
+	src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+    url('../fonts/Raleway-Regular.ttf') format('truetype');
 	font-style: normal;
  	font-weight: 400;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: Primary;
-	src: url('../fonts/DINNextLTPro-Medium.eot');
-	src: url('../fonts/DINNextLTPro-Medium.eot') format('embedded-opentype'),
-	url('../fonts/DINNextLTPro-Medium.woff2') format('woff2'),
-	url('../fonts/DINNextLTPro-Medium.woff') format('woff'),
-    url('../fonts/DINNextLTPro-Medium.ttf') format('truetype');
+	font-family: Open Sans;
+	src: url('../fonts/OpenSans-Regular.woff2');
+	src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.ttf') format('truetype');
 	font-style: normal;
- 	font-weight: 500;
+ 	font-weight: 400;
 	font-display: swap;
 }
 
-@font-face {
-	font-family: Primary;
-	src: url('../fonts/DINNextLTPro-Bold.eot');
-	src: url('../fonts/DINNextLTPro-Bold.eot') format('embedded-opentype'),
-	url('../fonts/DINNextLTPro-Bold.woff2') format('woff2'),
-	url('../fonts/DINNextLTPro-Bold.woff') format('woff'),
-    url('../fonts/DINNextLTPro-Bold.ttf') format('truetype');
-	font-style: normal;
- 	font-weight: 700;
-	font-display: swap;
-}
+$primary: Raleway, sans-serif;
+$secondary: Open Sans, sans-serif;
 
 body {
 	@include limbo-min {
@@ -41,13 +28,13 @@ body {
 	@include tab-max {
 		font-size: 16px;
 	}
-	font-family: Primary, sans-serif;
+	font-family: $primary;
 	color: var(--b-color);
 	line-height: var(--body-line-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Secondary, sans-serif;
+	font-family: $secondary;
 	color: var(--t-color);
 	line-height: var(--title-line-height);
 }

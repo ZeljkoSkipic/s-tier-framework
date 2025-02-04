@@ -67,6 +67,7 @@ body .acf-fields.-sidebar .acf-tab-group li{margin-bottom:4px}
 body .acf-fields.-sidebar .acf-tab-group li:first-child{border-top:2px solid !important;border-top-left-radius:8px}
 body .acf-fields.-sidebar .acf-tab-group li .acf-tab-button{border-radius:8px 0 0 8px;border-right:0;padding:15px;border:0}
 body .acf-fields.-sidebar .acf-tab-group li.active{border-radius:8px 0 0 8px;border:.5px solid #ccbeb4;border-right:0}
+body #wp-link-wrap .link-nofollow,body #wp-link-wrap .link-sponsored{display:none}
 @media(min-width:961px){.auto-fold:not(.folded) .edit-post-layout .components-editor-notices__snackbar{left:200px}
 body:not(.folded).auto-fold .interface-interface-skeleton{left:220px}
 body.folded.auto-fold .interface-interface-skeleton{left:60px}

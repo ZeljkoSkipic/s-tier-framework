@@ -23,6 +23,7 @@
 	--color-4: #33D4BE;
 
 	--t-color: #212121;
+	--b-color: #242424;
 	--link-color: #0a85ff;
 
 	--bg-1: #f7f7f7;
@@ -43,7 +44,7 @@
 	--site-max-width: 1440px;
   }
 
-  // Breakpoint sizes - Associated with Breakpoints in Mixins.scss
+  // Breakpoint sizes
 
   $mob-max: 480.5px;
   $tab-min: 480.6px;
@@ -99,6 +100,43 @@
 	align-items: center;
 	justify-content: center;
 }
+
+@mixin grid-5 {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin grid-4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin rep-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin rep-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin rep-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin rep-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
 
 @mixin bg-cl {
 	background-repeat: no-repeat;
