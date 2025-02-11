@@ -1,4 +1,4 @@
-![s-tier framework](https://stierdev.com/wp-content/uploads/2024/07/github.png)
+![s-tier framework](https://stierdev.com/wp-content/uploads/2025/02/github-2025.png)
 
 # S-Tier Dev Framework
 
