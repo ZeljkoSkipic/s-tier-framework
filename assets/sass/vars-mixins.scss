@@ -121,19 +121,19 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 
-@mixin rep-5 {
+@mixin col-5 {
 	grid-template-columns: repeat(5, 1fr);
 }
 
-@mixin rep-4 {
+@mixin col-4 {
 	grid-template-columns: repeat(4, 1fr);
 }
 
-@mixin rep-3 {
+@mixin col-3 {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-@mixin rep-2 {
+@mixin col-2 {
 	grid-template-columns: repeat(2, 1fr);
 }
 
@@ -239,7 +239,7 @@
 }
 
 @mixin md-desk-max {
-	@media (min-width: $md-desk-max) {
+	@media (max-width: $md-desk-max) {
 		@content;
 	}
 }
