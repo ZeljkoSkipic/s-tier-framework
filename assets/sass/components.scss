@@ -28,22 +28,22 @@
 
 .cols-2 {
 	.st_info_boxes_inner {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, minmax(0,1fr));
 	}
   }
   .cols-3 {
-		.st_info_boxes_inner {
-			grid-template-columns: repeat(3, 1fr);
+    .st_info_boxes_inner {
+			grid-template-columns: repeat(3, minmax(0,1fr));
 		}
   }
   .cols-4 {
     .st_info_boxes_inner {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(4, minmax(0,1fr));
 		}
   }
   .cols-5 {
-		.st_info_boxes_inner {
-			grid-template-columns: repeat(5, 1fr);
+    .st_info_boxes_inner {
+			grid-template-columns: repeat(5, minmax(0,1fr));
 		}
   }
   @include tab-max {

@@ -128,10 +128,10 @@ a{color:var(--link-color)}
 .block_bg img{height:100%;width:100%;-o-object-fit:cover;object-fit:cover}
 .intro_title:only-child{margin-bottom:var(--space-3)}
 .intro_text{margin-bottom:var(--space-3)}
-.cols-2 .st_info_boxes_inner{grid-template-columns:1fr 1fr}
-.cols-3 .st_info_boxes_inner{grid-template-columns:repeat(3,1fr)}
-.cols-4 .st_info_boxes_inner{grid-template-columns:repeat(4,1fr)}
-.cols-5 .st_info_boxes_inner{grid-template-columns:repeat(5,1fr)}
+.cols-2 .st_info_boxes_inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cols-3 .st_info_boxes_inner{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols-4 .st_info_boxes_inner{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cols-5 .st_info_boxes_inner{grid-template-columns:repeat(5,minmax(0,1fr))}
 .posts_grid{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .posts_grid h1{width:100%}
 .posts_grid .grid_item{width:31%;margin-bottom:3%}

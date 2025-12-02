@@ -32,21 +32,9 @@
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'stier' ); ?></a>
-	<div class="top_bar">
-		<div class="top_bar_inner container">
-			<?php echo wp_kses_post( get_field('top_bar_message', 'option') ); ?>
-		<?php
-		$cta_link = get_field('cta_link', 'option');
-		if( $cta_link ):
-			$cta_link_url = $cta_link['url'];
-			$cta_link_title = $cta_link['title'];
-			$cta_link_target = $cta_link['target'] ? $cta_link['target'] : '_self';
-			?>
-			<a class="" href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>"><span><?php echo esc_html( $cta_link_title ); ?></span></a>
-		<?php endif; ?>
-	</div>
 
-	</div>
+	<?php get_template_part('template-parts/top-bar'); ?>
+
 	<header id="masthead" class="header-main">
 		<div class="header-main_inner container">
 			<figure class="site-logo">
