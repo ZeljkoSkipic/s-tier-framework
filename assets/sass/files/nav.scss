@@ -13,6 +13,8 @@
 	padding-block: 8px;
 	.top_bar_inner {
 		display: flex;
+		flex-wrap: wrap;
+		gap: 1.6rem;
 		justify-content: center;
 		align-items: center;
 	}
@@ -25,7 +27,7 @@
 	}
 	a {
 		@include btn-2;
-		margin-left: 16px;
+		padding-block: .5rem;
 	}
 }
 @include desk-min {
