@@ -1,9 +1,8 @@
 <?php
-$cols = get_field_object('columns');
-$tab_cols = get_field_object('tab_columns');
-$mob_cols = get_field_object('mob_columns');
-
-$padding = get_field_object('padding');
+$padding = get_field('padding');
+$cols = get_field('columns');
+$tab_cols = get_field('tab_columns');
+$mob_cols = get_field('mob_columns');
 
 $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
@@ -15,23 +14,23 @@ if ( ! empty( $block['className'] ) ) {
     $class .= ' ' . $block['className'];
 }
 
-if ( ! empty( $cols ) ) {
-    $class .=  ' ' . $cols['value'];
-}
-if ( ! empty( $tab_cols ) ) {
-    $class .=  ' ' . $tab_cols['value'];
-}
-if ( ! empty( $mob_cols ) ) {
-    $class .=  ' ' . $mob_cols['value'];
+if ( ! empty( $padding) ) {
+    $class .=  ' ' . $padding;
 }
 
-if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding['value'];
+if ( ! empty( $cols ) ) {
+    $class .=  ' ' . $cols;
+}
+if ( ! empty( $tab_cols ) ) {
+    $class .=  ' ' . $tab_cols;
+}
+if ( ! empty( $mob_cols ) ) {
+    $class .=  ' ' . $mob_cols;
 }
 
 ?>
 
-<section <?php echo $anchor; ?> class="<?php echo $class ?>">
+<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
 <?php get_template_part('components/background'); ?>
 	<div class="container">
 		<?php get_template_part('components/intro'); ?>
@@ -48,7 +47,7 @@ if ( ! empty( $padding) ) {
 				$icon = get_sub_field('icons_test');
                 $size = 'full'; ?>
 
-                <div class="st_col column">
+                <div class="st_info_box">
 					<?php
 					if( $ib_image ) { ?>
 					<figure class="ib_image">
@@ -59,15 +58,20 @@ if ( ! empty( $padding) ) {
 						<figure class="ib_icon">
 							<?php echo $icon; ?>
 						</figure>
-					<?php }
-					if( $icon ) {
-
-					} ?>
-                   <h3 class="st_col_title"><?php echo $title; ?></h3>
-                    <div class="st_col_text">
+					<?php } ?>
+                   <h3 class="ib_title"><?php echo $title; ?></h3>
+                    <div class="ib_text">
                         <?php echo $text; ?>
                     </div>
-                    <?php get_template_part('components/inner-buttons'); ?>
+                    <?php
+					$ib_button = get_sub_field('ib_button');
+					if( $ib_button ):
+						$link_url = $ib_button['url'];
+						$link_title = $ib_button['title'];
+						$link_target = $ib_button['target'] ? $ib_button['target'] : '_self';
+						?>
+						<a class="ib_button btn-1" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php endif; ?>
                 </div>
                 <?php endwhile;
             endif; ?>

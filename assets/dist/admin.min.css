@@ -1,74 +1,99 @@
-body{background-color:#c5dbd9}
-.editor-preview-dropdown{display:none}
-body input[type=color],body input[type=date],body input[type=datetime-local],body input[type=datetime],body input[type=email],body input[type=month],body input[type=number],body input[type=password],body input[type=search],body input[type=tel],body input[type=text],body input[type=time],body input[type=url],body input[type=week],body select,body textarea{border:.5px solid #ccbeb4}
-body:not(.folded) #adminmenuwrap{width:205px}
-body:not(.folded) .woocommerce-layout__header{width:calc(100% - 218px)}
+div.acf-switch{border-radius:50px}
+div.acf-switch .acf-switch-slider{border-radius:50px}
+.acf-image-uploader .acf-button{border-radius:50px}
+.acf-color-picker .wp-color-result{border-radius:50px;overflow:hidden;outline:0}
+.acf-color-picker .wp-color-result .wp-color-result-text{padding-right:8px}
+.acf-input .acf-link .link-wrap,.acf-input .acf-link a{border-radius:50px}
+.st_contact_block .right{pointer-events:none}
+body #adminmenu .wp-has-current-submenu>a{background:#0071f0 !important;color:#fff !important}
+body #adminmenu .wp-has-current-submenu>a .wp-menu-image:before{color:#fff !important}
+body:not(.folded) #adminmenuwrap{width:180px}
+body:not(.folded) .woocommerce-layout__header{width:calc(100% - 183px)}
 body:not(.folded) #adminmenu{margin-left:5px}
 body:not(.folded) #adminmenu li:not(.wp-has-current-submenu) .wp-submenu{left:170px}
 body:not(.folded) #adminmenu .wp-has-submenu.wp-not-current-submenu:after{top:13px}
-body:not(.folded) #adminmenu .wp-submenu-head,body:not(.folded) #adminmenu a.menu-top{font-size:14px;border-radius:16px;padding-inline:5%}
-body:not(.folded) #adminmenu .wp-has-current-submenu>a{border-radius:10px 10px 0 0;background:#2271b1 !important;color:#fff !important}
+body:not(.folded) #adminmenu .wp-submenu-head,body:not(.folded) #adminmenu a.menu-top{border-radius:4px;padding-inline:5%}
+body:not(.folded) #adminmenu .wp-has-current-submenu>a{border-radius:4px 4px 0 0;background:#0071f0 !important;color:#fff !important}
 body:not(.folded) #adminmenu .wp-has-current-submenu>a .wp-menu-image:before{color:#fff !important}
-body:not(.folded) #adminmenuback{width:200px}
-body:not(.folded) li.menu-top{border-radius:16px;width:85%;margin-left:7.5% !important}
-body:not(.folded) #collapse-menu{width:85%;margin-left:10%}
+body:not(.folded) #adminmenuback{width:175px}
+body:not(.folded) li.menu-top{border-radius:8px;width:95%;margin-left:2.5% !important}
+body:not(.folded) #collapse-menu{width:95%;margin-left:5%}
 body:not(.folded) #collapse-button{padding-inline:5%;margin-left:5px}
 body.folded #adminmenuwrap{width:50px}
+body.folded .woocommerce-layout__header{width:calc(100% - 55px)}
 body.folded #adminmenu{width:50px}
-body.folded #adminmenu .wp-submenu-head,body.folded #adminmenu a.menu-top{font-size:13px;border-radius:8px;padding-inline:5%}
+body.folded #adminmenu .wp-submenu-head,body.folded #adminmenu a.menu-top{font-size:13px;border-radius:4px;padding-inline:5%}
 body.folded #adminmenu li.menu-top{width:40px;margin-left:5px;height:40px}
 body.folded #adminmenu li.menu-top.wp-has-current-submenu div.wp-menu-image::before{color:#fff !important}
-body.folded #adminmenu .wp-submenu-wrap{left:45px !important;border-radius:8px}
-body.folded #adminmenu div.wp-menu-image{width:40px;height:34px}
+body.folded #adminmenu .wp-submenu-wrap{left:45px !important;border-radius:4px}
+body.folded #adminmenu div.wp-menu-image{width:35px;height:34px}
 body.folded #adminmenuback{width:60px}
 body.folded #wpcontent,body.folded #wpfooter{margin-left:50px}
-body.folded #collapse-button .collapse-button-icon{width:50px;margin-left:2.5px}
-#wpadminbar{border-radius:16px 16px 0 0;background-color:#171821}
-#wpcontent,#wpfooter{margin-left:220px}
+body.folded #collapse-button .collapse-button-icon{width:45px;margin-left:2.5px}
+#wpcontent,#wpfooter{margin-left:180px}
 #adminmenu,#adminmenuwrap{background-color:transparent}
-#adminmenu{background-color:#18191b;border-radius:16px;min-height:calc(100vh - 60px);padding-top:8px;padding-bottom:8px;margin:6px 0}
-#adminmenuback{border-radius:16px;background:#171821;-webkit-backdrop-filter:blur(80px);backdrop-filter:blur(80px);top:30px;bottom:30px;display:none}
-li.menu-top{border-radius:16px}
+#adminmenu{background-color:#18191b;border-radius:8px;min-height:calc(100svh - 47px);padding-top:4px;padding-bottom:4px;margin:4px 0}
+#adminmenuback{border-radius:8px;background:#171821;-webkit-backdrop-filter:blur(80px);backdrop-filter:blur(80px);top:30px;bottom:30px;display:none}
+li.menu-top{border-radius:8px}
 .menu-top{margin-top:3px !important}
-.menu-top>a{padding-block:5px !important}
-#adminmenu{width:200px}
+.menu-top>a{padding-block:2.5px !important}
+#adminmenu{width:175px}
 #adminmenu li.wp-menu-separator{display:none}
-#adminmenu .wp-has-current-submenu .wp-submenu{background-color:#30a0fc;border-radius:0 0 10px 10px;width:100%}
-#adminmenu .wp-has-current-submenu .wp-submenu li a{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:20% !important;color:#fff !important;font-weight:400}
+#adminmenu>li:hover,#adminmenu>li.opensub{background-color:#0071f0 !important}
+#adminmenu>li:hover>a,#adminmenu>li.opensub>a{background-color:#0071f0 !important;color:#fff !important}
+#adminmenu .wp-has-current-submenu .wp-submenu{background-color:#172d54 !important;border-radius:0 0 4px 4px;width:100%}
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head{background-color:#0071f0}
+#adminmenu .wp-has-current-submenu .wp-submenu li a{display:-webkit-box;display:-ms-flexbox;display:flex;padding-left:15% !important;color:#fff !important;font-weight:400}
 #adminmenu .wp-has-current-submenu .wp-submenu li a.current{font-weight:600}
 #adminmenu .wp-has-current-submenu .wp-submenu li a.current::before{content:"-";margin-right:5px}
-#adminmenu .wp-not-current-submenu .wp-submenu{background-color:#171821;border-radius:0 10px 10px 0}
+#adminmenu .wp-not-current-submenu .wp-submenu{background-color:#171821;border-radius:0 4px 4px 0}
 #adminmenu .wp-not-current-submenu .wp-submenu li a{display:-webkit-box;display:-ms-flexbox;display:flex}
 #adminmenu .wp-not-current-submenu .wp-submenu li a:not(:hover){color:#8cb7b4 !important}
-html :where(.wp-block){margin-top:0}
-html :where(.wp-block){width:90%;max-width:980px}
-body .acf-settings-wrap .acf-postbox,body .acf-settings-wrap #submitdiv{border-top:4px solid;border-radius:8px}
-body .acf-settings-wrap .acf-postbox .inside,body .acf-settings-wrap #submitdiv .inside{background-color:rgba(255,237,224,0.56);border-radius:8px}
-body .acf-settings-wrap .acf-postbox .inside #major-publishing-actions,body .acf-settings-wrap #submitdiv .inside #major-publishing-actions{background-color:unset}
-body .acf-settings-wrap .acf-gallery .acf-gallery-attachment{width:6.25%}
-body .acf-block-fields.acf-fields{border-radius:16px;border:0;-webkit-backdrop-filter:blur(80px);backdrop-filter:blur(80px);background:rgba(255,237,224,0.56)}
-body .acf-block-fields.acf-fields input,body .acf-block-fields.acf-fields select,body .acf-block-fields.acf-fields .select2-selection,body .acf-block-fields.acf-fields .select2-dropdown,body .acf-block-fields.acf-fields .acf-table,body .acf-block-fields.acf-fields .acf-editor-wrap .wp-editor-container{border:.5px solid #ccbeb4;border-radius:8px}
-body .acf-block-fields.acf-fields textarea,body .acf-block-fields.acf-fields .quicktags-toolbar{border-radius:8px}
-body .title_message{font-size:25px;border-top:2px solid !important;border-top-right-radius:8px}
-body .acf-repeater .acf-row-handle.order{background-color:#ccbeb4;color:#171821;font-size:16px;text-shadow:none}
-body .acf-repeater .acf-row:first-child .acf-row-handle.order{border-top-left-radius:8px}
-body .acf-repeater .acf-row:nth-last-child(2) .acf-row-handle.order{border-bottom-left-radius:8px}
-body .acf-repeater .acf-fields.-left>.acf-field:before{background-color:rgba(255,237,224,0.56)}
-body .acf-fields>.acf-tab-wrap{border-radius:28px 28px 0 0;background:rgba(255,237,224,0.56)}
-body .acf-fields>.acf-tab-wrap .acf-tab-group{border:0}
-body .acf-fields>.acf-tab-wrap .acf-tab-group li .acf-tab-button{border-radius:8px 8px 0 0;background:#ccbeb4;color:#fff;-webkit-transition:.3s all;transition:.3s all;border:.5px solid #ccbeb4}
-body .acf-fields>.acf-tab-wrap .acf-tab-group li.active .acf-tab-button{background:rgba(255,237,224,0.56);border-bottom:0;color:#242220}
-body .acf-fields>.acf-tab-wrap .acf-tab-group li:hover .acf-tab-button{background:rgba(255,237,224,0.56);color:#242220}
-body .acf-fields>.acf-tab-wrap.-left .acf-tab-group{width:15%}
-body .acf-fields.-sidebar{padding-left:15% !important}
-body .acf-fields.-sidebar:before{background-color:#fff;border-right:0;width:15% !important}
-body .acf-fields.-sidebar .acf-tab-group{border:0}
-body .acf-fields.-sidebar .acf-tab-group li{margin-bottom:4px}
-body .acf-fields.-sidebar .acf-tab-group li:first-child{border-top:2px solid !important;border-top-left-radius:8px}
-body .acf-fields.-sidebar .acf-tab-group li .acf-tab-button{border-radius:8px 0 0 8px;border-right:0;padding:15px;border:0}
-body .acf-fields.-sidebar .acf-tab-group li.active{border-radius:8px 0 0 8px;border:.5px solid #ccbeb4;border-right:0}
+html :where(.wp-block){max-width:100% !important;margin-top:0}
+.editor-visual-editor__post-title-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}
+.is-root-container{z-index:1}
+.wp-block{z-index:2}
+#wpcontent .acf-admin-toolbar{margin-left:-15px}
+.acf-block-form-modal{max-width:780px !important;background-color:#fdfdfd}
+.acf-block-form-modal .acf-table{border-radius:4px;overflow:hidden}
+.acf-block-form-modal .acf-modal-block-form-container{border-bottom:1px solid #ccbeb4}
+.acf-block-form-modal .acf-block-fields{background-color:#fdfdfd !important}
+.acf-block-form-modal .components-modal__header{background-color:#172d54;height:40px}
+.acf-block-form-modal .components-modal__header h1{color:#fff}
+.acf-block-form-modal .components-modal__content{margin-top:60px}
+.acf-block-form-modal .acf-tab-wrap{border-bottom:1px solid #ccbeb4;margin-bottom:24px}
+.acf-block-form-modal .acf-tab-group li{min-width:100px;text-align:center;margin-right:16px}
+.acf-block-form-modal .acf-tab-group li a{border:0;background-color:transparent !important;font-size:16px;letter-spacing:.5px;font-weight:400;color:#000}
+.acf-block-form-modal .acf-tab-group li.active{border-bottom:2px solid #0071f0;color:#000}
+.acf-repeater .acf-row:first-child .acf-row-handle.order{border-bottom-left-radius:4px}
+.acf-repeater .acf-row:first-child .acf-row-handle.remove{border-top-right-radius:4px}
+.acf-repeater .acf-row:last-child .acf-row-handle.remove{border-bottom-right-radius:4px}
+.acf-repeater .acf-row:last-child .acf-row-handle.order{border-bottom-right-radius:4px}
+.acf-repeater .acf-row-handle.order,.acf-repeater .acf-row-handle.remove{background-color:#f5f7fa;font-size:16px;color:#000 !important;padding:4px}
+.acf-repeater .acf-fields.-left>.acf-field>.acf-label{width:15%}
+.acf-repeater .acf-fields.-left>.acf-field>.acf-input{width:85%}
+.acf-repeater .acf-fields.-left>.acf-field:before{width:15%;background-color:#fdfdfd}
+.editor-sidebar .acf-repeater.-row .acf-field::before{width:100%}
+.editor-sidebar .acf-repeater.-row .acf-field .acf-label{width:100%}
+.editor-sidebar .acf-repeater.-row .acf-field .acf-input{width:100%}
+.editor-sidebar .acf-tab-group{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-top:22.5px}
+.editor-sidebar .acf-tab-group li{border-bottom:2px solid rgba(0,0,0,0.05)}
+.editor-sidebar .acf-tab-group li a{border:0;background-color:transparent !important;font-size:13px;font-weight:400;color:#000;padding:10px 7.5px !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.editor-sidebar .acf-tab-group li.active{border-color:#0071f0;color:#000}
+.editor-sidebar .acf-field{width:100% !important}
+.editor-sidebar .quicktags-toolbar{display:none}
+body .acf-block-preview a{pointer-events:none}
 body #wp-link-wrap .link-nofollow,body #wp-link-wrap .link-sponsored{display:none}
-@media(min-width:961px){.auto-fold:not(.folded) .edit-post-layout .components-editor-notices__snackbar{left:200px}
-body:not(.folded).auto-fold .interface-interface-skeleton{left:220px}
-body.folded.auto-fold .interface-interface-skeleton{left:60px}
+.acf-settings-wrap h1{height:5px;opacity:0;pointer-events:none}
+.acf-settings-wrap .acf-postbox{border:0;border-radius:4px;overflow:hidden}
+.acf-settings-wrap .acf-postbox .postbox-header{background-color:#172d54}
+.acf-settings-wrap .acf-postbox .postbox-header h2.hndle{font-size:18px !important;font-weight:400;padding:12px 24px !important;color:#fff}
+.acf-settings-wrap .acf-tab-wrap{background-color:#fff !important;margin-bottom:16px}
+.acf-settings-wrap .acf-tab-group li{min-width:120px;text-align:center;margin-right:16px}
+.acf-settings-wrap .acf-tab-group li a{border:0;background-color:transparent !important;font-size:16px;letter-spacing:.5px;font-weight:400;color:#000;padding-inline:20px}
+.acf-settings-wrap .acf-tab-group li.active{border-bottom:2px solid #0071f0;color:#000}
+.acf-settings-wrap .acf-field .acf-gallery-attachment{width:5% !important}
+@media(min-width:961px){body:not(.folded).auto-fold .interface-interface-skeleton{left:180px}
+body.folded.auto-fold .interface-interface-skeleton{left:55px}
+.auto-fold:not(.folded) .edit-post-layout .components-editor-notices__snackbar{left:200px}
 }

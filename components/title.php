@@ -1,7 +1,7 @@
 <?php
-
 $title = get_field('title');
+$tag = get_field('heading_tag');
 
 if( $title ) { ?>
-<h2 class="intro_title"><?php echo get_field('title'); ?></h2>
+<<?php echo esc_html($tag); ?> class="intro_title"><?php echo $title; ?></<?php echo esc_html($tag); ?>>
 <?php }

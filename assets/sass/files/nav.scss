@@ -7,8 +7,6 @@
 	}
 }
 .top_bar {
-	background-color: var(--color-1);
-	color: #000;
 	text-align: center;
 	padding-block: 8px;
 	.top_bar_inner {
@@ -44,10 +42,10 @@
 			@include flex;
 			justify-content: space-between;
 			align-items: center;
-			padding-block: 1rem;
+			padding-block: 1.5rem;
 			position: relative;
 			.site-logo {
-				width: 200px;
+				width: 150px;
 				margin: 0;
 				img {
 					object-fit: contain;
@@ -140,12 +138,10 @@
 					color: var(--t-color);
 				}
 				.sub-menu-trigger {
-					float: right;
 					display: flex;
 					transform: rotate(45deg);
 					margin-left: 1rem;
 					pointer-events: none;
-					cursor: pointer;
 					@include st;
 					svg {
 						stroke: var(--color-1);

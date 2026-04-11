@@ -1,7 +1,4 @@
 <?php
-
-$padding = get_field_object('padding');
-
 $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
     $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
@@ -13,7 +10,7 @@ if ( ! empty( $block['className'] ) ) {
 }
 
 ?>
-<section <?php echo $anchor; ?> class="<?php echo $class ?>">
+<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
 	<div class="main-carousel">
 		<?php
 

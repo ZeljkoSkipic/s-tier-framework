@@ -1,4 +1,7 @@
-@import 'vars-mixins';
+// Block files are loaded automatically and compiled into equivalent block folder
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/classes';
 
 @import 'vendor/normalize';
 @import 'vendor/fonts';
@@ -8,13 +11,6 @@
 @import 'components';
 @import 'files/archive';
 // @import 'files/tax-filters';
-
-@import 'blocks/accordion';
-@import 'blocks/tabs';
-@import 'blocks/info-boxes';
-@import 'blocks/basic-section';
-@import 'blocks/contact';
-@import 'blocks/carousel';
 
 @import 'files/nav';
 @import 'files/nav-mobile';

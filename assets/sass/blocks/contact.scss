@@ -1,8 +1,7 @@
 .st_contact_block_inner {
-	@include flex-between;
-	> div {
-		@include limbo-min {
-			width: 48%;
-		}
+	@include grid-2;
+	gap: var(--space-4);
+	@include tab-max {
+		@include col-1;
 	}
 }

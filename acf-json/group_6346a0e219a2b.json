@@ -1,6 +1,6 @@
 {
     "key": "group_6346a0e219a2b",
-    "title": "Block: Accordion",
+    "title": "BLOCK: Accordion",
     "fields": [
         {
             "key": "field_6346f73b8e4b4",
@@ -16,26 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6508cd0f5fcf0",
-            "label": "Intro",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6346f7468e4b5",
@@ -73,26 +56,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6508cd1b5fcf1",
-            "label": "Content",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6346a0e2d64ca",
@@ -174,26 +140,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6508cd265fcf2",
-            "label": "Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6346afcc1ebdb",
@@ -258,6 +207,34 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_69d55094f8972",
+            "label": "Gallery",
+            "name": "gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -278,5 +255,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701625320
+    "display_title": "",
+    "allow_ai_access": 0,
+    "ai_description": "",
+    "modified": 1775587486
 }

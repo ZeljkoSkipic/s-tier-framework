@@ -1,8 +1,5 @@
 <?php
-if ( have_rows('tabs') ) :
-
-$padding = get_field_object('padding');
-
+$padding = get_field('padding');
 
 $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
@@ -18,15 +15,16 @@ if( get_field('stack_tabs') ) {
 }
 
 if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding['value'];
+    $class .=  ' ' . $padding;
 }
 
- ?>
-<section <?php echo $anchor; ?> class="<?php echo $class ?>">
+?>
+<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
 <?php get_template_part('components/background'); ?>
 	<div class="container">
 		<?php get_template_part('components/intro'); ?>
 		<?php $item=1; ?>
+		<?php if ( have_rows('tabs') ) : ?>
 		<header class="st_tabs_nav">
 			<ul>
 				<?php while( have_rows('tabs') ) : the_row();
@@ -37,7 +35,7 @@ if ( ! empty( $padding) ) {
 				<?php endwhile; ?>
 			</ul>
 		</header>
-		<section class="st_tabs_content">
+		<div class="st_tabs_content">
 			<?php $item=1; ?>
 			<?php while( have_rows('tabs') ) : the_row();
 				$title = get_sub_field('tab_title');
@@ -52,7 +50,7 @@ if ( ! empty( $padding) ) {
 				</div>
 			<?php $item++;?>
 			<?php endwhile; ?>
-		</section>
+		</div>
+		<?php endif; ?>
 	</div>
 </section>
-<?php endif; ?>

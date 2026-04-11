@@ -57,8 +57,29 @@ function stier_setup()
 			'flex-height' => true,
 		)
 	);
+
+	// Add support for custom editor style
+
+	add_theme_support('editor-styles');
+
 }
 add_action('after_setup_theme', 'stier_setup');
+
+
+
+function stier_editor_styles() {
+
+    add_editor_style( '/assets/dist/theme.min.css' );
+}
+add_action( 'current_screen', 'stier_editor_styles' );
+
+
+function stier_acf_settings() {
+    wp_enqueue_style('admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css');
+}
+
+add_action('acf/input/admin_head', 'stier_acf_settings');
+
 
 // Enqueue scripts and styles.
 
@@ -155,3 +176,11 @@ add_action('init', function () {
 		remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
 	}
 });
+
+// Remove Admin Color Schemes
+add_action( 'admin_init', function() {
+    remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
+});
+
+// ACF AI
+// add_filter( 'acf/settings/enable_acf_ai', '__return_true' );

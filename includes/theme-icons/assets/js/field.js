@@ -1,41 +1,39 @@
-/**
- * Included when s_tier_icons fields are rendered for editing by publishers.
- */
 (function ($) {
   function initialize_field($field) {
-    /**
-     * $field is a jQuery object wrapping field elements in the editor.
-     */
-
-    const labels = $($field).find(".s-tier-icons__item-label");
-
-    const iconActive = (e) => {
+    const $container = $field.find(".s-tier-icons");
+    
+    $container.off('click.stier').on('click.stier', '.s-tier-icons__item-label', function(e) {
       e.preventDefault();
-      const label = $(e.currentTarget);
-      const input = label.prev();
-      const isInputChecked = input.prop("checked");
-
-      if (!label.hasClass("active")) {
-        labels.removeClass("active");
-
-        if (isInputChecked) {
-          input.prop("checked", false);
-        } else {
-          input.prop("checked", true);
-          label.addClass("active");
+      const $label = $(this);
+      const $input = $label.prev('input');
+      const $allLabels = $container.find('.s-tier-icons__item-label');
+      
+      if (!$label.hasClass("active")) {
+        $allLabels.removeClass("active");
+        $container.find('input[type="radio"]').prop("checked", false);
+        
+        $input.prop("checked", true);
+        $label.addClass("active");
+        $input.trigger('change');
+        
+        if (typeof acf !== 'undefined') {
+          $field.trigger('change');
+          
+          if (typeof acf.validation !== 'undefined') {
+            acf.validation.remove($field);
+          }
         }
       }
-    };
-
-    labels.on("click", iconActive);
+    });
   }
 
   if (typeof acf.add_action !== "undefined") {
-    /**
-     * Run initialize_field when existing fields of this type load,
-     * or when new fields are appended via repeaters or similar.
-     */
+    // ACF Classic
     acf.add_action("ready_field/type=s_tier_icons", initialize_field);
     acf.add_action("append_field/type=s_tier_icons", initialize_field);
+    
+    // ACF Block Editor v3
+    acf.add_action("load_field/type=s_tier_icons", initialize_field);
+    acf.add_action("show_field/type=s_tier_icons", initialize_field);
   }
 })(jQuery);

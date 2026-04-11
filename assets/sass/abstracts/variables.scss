@@ -1,0 +1,57 @@
+:root {
+	--font-size-1: clamp(35px, 2.9vw, 50px);
+	--font-size-2: clamp(30px, 2.6vw, 45px);
+	--font-size-3: clamp(27.5px, 2.4vw, 40px);
+	--font-size-4: clamp(25px, 2.05vw, 35px);
+	--font-size-5: clamp(22.5px, 1.8vw, 30px);
+	--font-size-6: clamp(20px, 1.5vw, 25px);
+
+	--space-1: clamp(50px, 5.5vw, 100px);
+	--space-2: clamp(40px, 4.5vw, 80px);
+	--space-3: clamp(35px, 3.5vw, 60px);
+	--space-4: clamp(25px, 2.5vw, 40px);
+
+	--color-1: #0071F0;
+	--color-2: #172D54;
+
+	--t-color: #212121;
+	--b-color: #242424;
+	--link-color: #0a85ff;
+
+	--st: .3s all;
+
+	--title-line-height: 1.2;
+	--body-line-height: 1.5;
+
+	@media (min-width: 480.6px) /* Insert the same width as tab-min variable */ {
+	  --site-width: clamp(300px, 90%, 1440px);
+	}
+
+	@media (max-width: 480.5px) /* Insert the same width as mob-max variable */ {
+	  --site-width: calc(100% - 50px);
+	}
+}
+
+// Font Sizes - Used for Body size clamp function
+
+$mob-font-size: 16px;
+$desk-font-size: 20px;
+
+html {
+	font-size: 10px;
+	@include md-desk-only {
+		font-size: 8px;
+	  }
+	  @include sm-desk-only {
+		font-size: 7px;
+	  }
+	  @include limbo-only {
+		font-size: 7px;
+	  }
+	  @include tab-only {
+		font-size: 8px;
+	  }
+	  @include mob-only {
+		font-size: 7px;
+	  }
+}

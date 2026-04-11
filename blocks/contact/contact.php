@@ -1,6 +1,5 @@
 <?php
-
-$padding = get_field_object('padding');
+$padding = get_field('padding');
 $form = get_field('contact_form');
 
 $anchor = '';
@@ -10,11 +9,11 @@ if ( ! empty( $block['anchor'] ) ) {
 
 $class = 'st_block st_contact_block';
 if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding['value'];
+    $class .=  ' ' . $padding;
 }
 
 ?>
-<section <?php echo $anchor; ?> class="<?php echo $class ?>">
+<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
 <?php get_template_part('components/background'); ?>
 	<div class="st_contact_block_inner container">
 		<div class="left">

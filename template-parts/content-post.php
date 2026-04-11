@@ -30,7 +30,7 @@ $excerpt = get_the_excerpt();
         }
           ?>
         <div class="entry-content"> <?php echo $trimmed_excerpt;  ?> </div>
-		<a href="<?php get_the_permalink(); ?>">Read More</a>
+		<a class="gi_read_more" href="<?php the_permalink(); ?>">Read More</a>
     <?php endif; ?>
 
 </article>

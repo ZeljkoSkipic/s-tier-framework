@@ -1,0 +1,255 @@
+// Breakpoint sizes
+
+$mob-max: 480.5px;
+$tab-min: 480.6px;
+$tab-max: 834.5px;
+$limbo-min: 834.6px;
+$limbo-max: 1199.5px;
+$desk-min: 1199.6px;
+$sm-desk-max: 1360.5px;
+$md-desk-min: 1360.6px;
+$md-desk-max: 1660.5px;
+$lg-desk-min: 1660.6px;
+$huge-desk-min: 2560px;
+
+@mixin abs { // Mostly used for pseudo elements
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+@mixin clean-list {
+	padding-left: 0;
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+@mixin flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@mixin flex-between {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-center {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin grid-5 {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin grid-4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin col-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin col-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin col-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin col-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin col-1 {
+	grid-template-columns: 1fr;
+}
+
+
+@mixin bg-cl {
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+@mixin bg-cr {
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+@mixin bg-c {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@mixin bg_div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+@mixin st {
+	transition: var(--st);
+}
+
+
+// Breakpoints
+
+@mixin mob-only {
+	@media (max-width: $mob-max) {
+		@content;
+	}
+}
+
+@mixin tab-min {
+	@media (min-width: $tab-min) {
+		@content;
+	}
+}
+
+@mixin tab-max {
+	@media (max-width: $tab-max) {
+		@content;
+	}
+}
+
+@mixin tab-only {
+	@media (min-width: $tab-min) and (max-width: $tab-max) {
+		@content;
+	}
+}
+
+@mixin limbo-min {
+	@media (min-width: $limbo-min) {
+		@content;
+	}
+}
+
+@mixin limbo-max {
+	@media (max-width: $limbo-max) {
+		@content;
+	}
+}
+
+@mixin limbo-only {
+	@media (min-width: $limbo-min) and (max-width: $limbo-max) {
+		@content;
+	}
+}
+
+@mixin desk-min {
+	@media (min-width: $desk-min) {
+		@content;
+	}
+}
+
+@mixin sm-desk-only {
+	@media (min-width: $desk-min) and (max-width: $sm-desk-max) {
+		@content;
+	}
+}
+
+@mixin sm-desk-max {
+	@media (max-width: $sm-desk-max) {
+		@content;
+	}
+}
+
+@mixin md-desk-min {
+	@media (min-width: $md-desk-min) {
+		@content;
+	}
+}
+
+@mixin md-desk-max {
+	@media (max-width: $md-desk-max) {
+		@content;
+	}
+}
+
+@mixin md-desk-only {
+	@media (min-width: $md-desk-min)  and (max-width: $md-desk-max) {
+		@content;
+	}
+}
+
+@mixin lg-desk-min {
+	@media (min-width: $lg-desk-min) {
+		@content;
+	}
+}
+
+@mixin huge-desk-min {
+	@media (min-width: $huge-desk-min) {
+		@content;
+	}
+}
+
+
+// Buttons
+
+@mixin btn {
+	padding: 1rem 2.5rem;
+	width: fit-content;
+	min-width: 150px;
+	display: inline-flex;
+	box-sizing: border-box;
+	justify-content: center;
+	transition: var(--st);
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	font-size: clamp(15px, 1.2vw , 18px);
+}
+
+@mixin btn-1 {
+	@include btn;
+	background-color: var(--color-1);
+}
+
+@mixin btn-2 {
+	@include btn;
+	background-color: var(--color-2);
+	&:not(:first-of-type) {
+		@include tab-min {
+			margin-left: 2rem;
+		}
+	}
+}

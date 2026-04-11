@@ -1,6 +1,6 @@
 {
     "key": "group_63760bb564495",
-    "title": "BLOCK: Info Box Columns",
+    "title": "BLOCK: Info Boxes",
     "fields": [
         {
             "key": "field_6376148554186",
@@ -16,27 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_6508d28cd8377",
-            "label": "Intro",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_637615ef54187",
@@ -74,27 +56,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_6508d2add8378",
-            "label": "Content",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_63760bb52814b",
@@ -221,10 +185,10 @@
                 },
                 {
                     "key": "field_63761779017f9",
-                    "label": "Buttons",
-                    "name": "buttons",
+                    "label": "Button",
+                    "name": "ib_button",
                     "aria-label": "",
-                    "type": "clone",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -233,13 +197,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "clone": [
-                        "group_63499d76f1b93"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0,
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
                     "parent_repeater": "field_63760bb52814b"
                 }
             ]
@@ -258,27 +217,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_6508d2b8d8379",
-            "label": "Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_637616cf54189",
@@ -383,5 +324,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734976110
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1775681637
 }

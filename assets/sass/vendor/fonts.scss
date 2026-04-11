@@ -22,12 +22,7 @@ $primary: Raleway, sans-serif;
 $secondary: Open Sans, sans-serif;
 
 body {
-	@include limbo-min {
-		font-size: 20px;
-	}
-	@include tab-max {
-		font-size: 16px;
-	}
+	font-size: clamp($mob-font-size, 1.2vw , $desk-font-size);
 	font-family: $primary;
 	color: var(--b-color);
 	line-height: var(--body-line-height);
@@ -37,4 +32,5 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $secondary;
 	color: var(--t-color);
 	line-height: var(--title-line-height);
+	margin-bottom: .5em;
 }

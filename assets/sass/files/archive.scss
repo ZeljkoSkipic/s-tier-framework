@@ -1,17 +1,15 @@
 .posts_grid {
-	@include flex-between;
-	h1 {
-		width: 100%;
+	@include grid-4;
+	gap: 4.8rem;
+	@include tab-only {
+		@include col-2;
+	}
+	@include mob-only {
+		@include col-1;
 	}
 	.grid_item {
-		width: 31%;
-		margin-bottom: 3%;
-		@include tab-only {
-			width: 48%;
-		}
-		@include mob-only {
-			width: 100%;
-		}
+		display: flex;
+		flex-direction: column;
 		.gi_title {
 			margin-bottom: 1.8rem;
 			font-size: var(--font-size-5);
@@ -26,11 +24,30 @@
 				height: 100%;
 			}
 		}
+		.gi_read_more {
+			margin-top: 1.6rem;
+			display: flex;
+			margin-top: auto;
+		}
 	}
 	.posts-navigation {
 		width: 100%;
 		.nav-links {
 			@include flex-between;
 		}
+	}
+}
+
+.blog_pagination {
+	text-align: center;
+	.page-numbers:not(.prev):not(.next) {
+		width: 3.5rem;
+		height: 3.5rem;
+		border: 1px solid gray;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-inline: .5rem
+
 	}
 }

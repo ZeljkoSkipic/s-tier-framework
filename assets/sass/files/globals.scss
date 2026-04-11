@@ -1,40 +1,29 @@
 .container {
 	width: var(--site-width);
-	max-width: var(--site-max-width);
 	margin-inline: auto;
 }
 
-// Fix user agent spacings
-
-h1, h2  {
-	margin-bottom: var(--t-space-1);
-}
-
-h3, h4, h5, h6 {
-	margin-bottom: var(--t-space-2);
-}
-
-.title-1 {
+h1, .title-1 {
 	font-size: var(--font-size-1);
 }
 
-.title-2 {
+h2, .title-2 {
 	font-size: var(--font-size-2);
 }
 
-.title-3 {
+h3, .title-3 {
 	font-size: var(--font-size-3);
 }
 
-.title-4 {
+h4, .title-4 {
 	font-size: var(--font-size-4);
 }
 
-.title-5 {
+h5, .title-5 {
 	font-size: var(--font-size-5);
 }
 
-.title-6 {
+h6, .title-6 {
 	font-size: var(--font-size-6);
 }
 
@@ -45,7 +34,6 @@ h3, h4, h5, h6 {
 a {
 	color: var(--link-color)
 }
-
 
 .error404 {
 	article {

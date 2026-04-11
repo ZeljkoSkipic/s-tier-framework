@@ -7,10 +7,11 @@
 		}
 		figure {
 			margin-bottom: var(--space-4);
+			width: 100%;
 		}
-		.st_col {
+		.st_info_box {
 			@include flex-col;
-			.btns {
+			.ib_button {
 				margin-top: auto;
 			}
 		}

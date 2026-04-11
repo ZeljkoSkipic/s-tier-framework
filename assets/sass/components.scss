@@ -16,8 +16,10 @@
 	}
 }
 
-.intro_title:only-child {
-	margin-bottom: var(--space-3);
+.intro_title {
+	&:only-child {
+		margin-bottom: var(--space-3);
+	}
 }
 
 .intro_text {
@@ -30,58 +32,58 @@
 	.st_info_boxes_inner {
 		grid-template-columns: repeat(2, minmax(0,1fr));
 	}
-  }
-  .cols-3 {
-    .st_info_boxes_inner {
-			grid-template-columns: repeat(3, minmax(0,1fr));
+}
+.cols-3 {
+	.st_info_boxes_inner {
+		grid-template-columns: repeat(3, minmax(0,1fr));
+	}
+}
+.cols-4 {
+	.st_info_boxes_inner {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
+}
+.cols-5 {
+	.st_info_boxes_inner {
+		grid-template-columns: repeat(5, minmax(0,1fr));
+	}
+}
+@include tab-max {
+	.tab-cols-1 {
+		.st_info_boxes_inner {
+			grid-template-columns: 1fr;
 		}
-  }
-  .cols-4 {
-    .st_info_boxes_inner {
-			grid-template-columns: repeat(4, minmax(0,1fr));
+	}
+	.tab-cols-2 {
+		.st_info_boxes_inner {
+			grid-template-columns: 1fr 1fr;
 		}
-  }
-  .cols-5 {
-    .st_info_boxes_inner {
-			grid-template-columns: repeat(5, minmax(0,1fr));
+}
+	.tab-cols-3 {
+		.st_info_boxes_inner {
+			grid-template-columns: repeat(3, 1fr);
 		}
-  }
-  @include tab-max {
-    .tab-cols-1 {
-      .st_info_boxes_inner {
-				grid-template-columns: 1fr;
-			}
-    }
-    .tab-cols-2 {
-      .st_info_boxes_inner {
-				grid-template-columns: 1fr 1fr;
-			}
-    }
-    .tab-cols-3 {
-      .st_info_boxes_inner {
-				grid-template-columns: repeat(3, 1fr);
-			}
-    }
-    .tab-cols-4 {
-      .st_info_boxes_inner {
-				grid-template-columns: repeat(4, 1fr);
-			}
-    }
-  }
-  @include mob-only {
-    .mob-cols-1 {
-      .st_info_boxes_inner {
-				grid-template-columns: 1fr;
-			}
-    }
-    .mob-cols-2 {
-      .st_info_boxes_inner {
-				grid-template-columns: 1fr 1fr;
-			}
-    }
-    .mob-cols-3 {
-      .st_info_boxes_inner {
-				grid-template-columns: repeat(3, 1fr);
-			}
-    }
-  }
+	}
+	.tab-cols-4 {
+		.st_info_boxes_inner {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}
+@include mob-only {
+	.mob-cols-1 {
+		.st_info_boxes_inner {
+			grid-template-columns: 1fr;
+		}
+	}
+	.mob-cols-2 {
+		.st_info_boxes_inner {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	.mob-cols-3 {
+		.st_info_boxes_inner {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

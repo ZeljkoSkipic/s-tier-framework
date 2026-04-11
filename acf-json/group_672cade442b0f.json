@@ -16,27 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_672cade44b053",
-            "label": "Intro",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_672cade44eb54",
@@ -74,27 +56,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_672cade4560ce",
-            "label": "Form",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_672cae2b24a55",
@@ -137,27 +101,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_672cade45d68a",
-            "label": "Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_672cade46125f",
@@ -222,5 +168,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730981527
+    "display_title": "",
+    "allow_ai_access": 0,
+    "ai_description": "",
+    "modified": 1773259322
 }

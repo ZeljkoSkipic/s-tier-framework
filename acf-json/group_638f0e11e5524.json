@@ -1,6 +1,6 @@
 {
     "key": "group_638f0e11e5524",
-    "title": "Block: Tabs",
+    "title": "BLOCK: Tabs",
     "fields": [
         {
             "key": "field_638f0e11ea5c6",
@@ -16,26 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6508d4d82395c",
-            "label": "Intro",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_638f0e11ee032",
@@ -74,7 +57,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6508d4e92395d",
@@ -174,26 +158,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
-            "key": "field_6508d4f32395e",
-            "label": "Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_638f3110b8241",
@@ -298,5 +265,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695077788
+    "display_title": "",
+    "allow_ai_access": 0,
+    "ai_description": "",
+    "modified": 1773095163
 }

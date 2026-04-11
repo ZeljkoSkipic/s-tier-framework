@@ -24,8 +24,11 @@ get_header();
 						the_post();
 						get_template_part( 'template-parts/content', get_post_type() );
 					endwhile; ?>
-					<?php the_posts_navigation(); ?>
 				</div>
+				<div class="container blog_pagination space_2_0">
+					<?php the_posts_pagination(); ?>
+				</div>
+
 			<?php endif; ?>
 
 	</main><!-- #main -->

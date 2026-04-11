@@ -9,5 +9,4 @@ if( $intro_text ) { ?>
 		<?php echo get_field('intro_text') ?>
 	</div>
 <?php } ?>
-
 </div>

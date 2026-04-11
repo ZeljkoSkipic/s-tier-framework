@@ -112,7 +112,7 @@ class acf_field_s_tier_icons extends \acf_field
 	/**
 	 * Settings to display when users configure a field of this type.
 	 *
-	 * These settings appear on the ACF “Edit Field Group” admin page when
+	 * These settings appear on the ACF "Edit Field Group" admin page when
 	 * setting up the field.
 	 *
 	 * @param array $field
@@ -142,6 +142,10 @@ class acf_field_s_tier_icons extends \acf_field
 
 		if ($field['type'] === 's_tier_icons') {
 
+			if ($value === 'none' || empty($value)) {
+				return '';
+			}
+
 			$icon_path = get_attached_file($value);
 			$svg_content = $this->read_svg_file($icon_path);
 
@@ -167,6 +171,22 @@ class acf_field_s_tier_icons extends \acf_field
 ?>
 		<div class="s-tier-icons">
 			<div class="s-tier-icons__inner">
+				<div class="s-tier-icons__item">
+					<input <?php if (empty($field['value']) || $field['value'] == 'none') echo 'checked="checked"'; ?>
+						   id="no-icon-<?php echo $field['key']; ?>"
+						   name="<?php echo esc_attr($field['name']) ?>"
+						   value="none"
+						   type="radio">
+					<label class="s-tier-icons__item-label no-icon-label <?php if (empty($field['value']) || $field['value'] == 'none') echo 'active'; ?>"
+						   for="no-icon-<?php echo $field['key']; ?>"
+						   title="<?php esc_attr_e('No icon', 'stier'); ?>">
+						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+							<line x1="8" y1="8" x2="32" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+						</svg>
+					</label>
+				</div>
+
 				<?php
 				if ($icons) :
 					foreach ($icons as $icon) :
@@ -175,7 +195,7 @@ class acf_field_s_tier_icons extends \acf_field
 						if (!$svg) continue;
 				?>
 						<div class="s-tier-icons__item">
-							<input  <?php if ($field['value'] == $icon) echo 'checked=checked'; ?> id="<?php echo $icon; ?>" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo $icon ?>" type="radio">
+							<input  <?php if ($field['value'] == $icon) echo 'checked="checked"'; ?> id="<?php echo $icon; ?>" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo $icon ?>" type="radio">
 							<label class="s-tier-icons__item-label  <?php if ($field['value'] == $icon) echo 'active'; ?>" for="<?php echo $icon; ?>"><?php echo $svg; ?></label>
 						</div>
 					<?php

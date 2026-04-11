@@ -1,6 +1,6 @@
 .st_tabs {
-	@include ds;
     .st_tabs_nav {
+		border-bottom: 1px solid var(--color-2);
         ul {
             margin: 0;
             padding: 0;
@@ -8,34 +8,23 @@
         }
         li {
             display: inline-block;
-            background: var(--color-1);
             margin-right: 5px;
-			border-radius: .5rem .5rem 0 0;
+			border-bottom: 2px solid transparent;
             a {
                 display: block;
-                padding: 1.5rem 2rem;
-                color: #fff;
-				font-size: 16px;
+                padding: 2rem 2.5rem;
+				font-size: 18px;
+				color: var(--b-color);
             }
             &.active {
-                background: #fff;
-                a {
-					color: #000;
-					font-size: 18px;
-                }
+                border-color: var(--color-1);
             }
         }
     }
-	.st_nav {
-
-	}
     .st_tabs_content {
-        padding: 3rem;
+        padding-top: 3rem;
         background: #FFF;
-        margin-top: -1px;
         overflow: hidden;
-		@include br1;
-		border-top-left-radius: 0;
         .st_tab:not(:first-child) {
             display: none;
         }
@@ -46,6 +35,9 @@
                 flex-direction: column;
                 li {
                     width: 100%;
+					a {
+						padding: 1.5rem 0;
+					}
                     &.active {
                         order: 1;
                     }

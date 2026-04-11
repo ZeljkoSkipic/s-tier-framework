@@ -1,0 +1,10 @@
+.st_contact_block_inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+@media (max-width: 834.5px) {
+  .st_contact_block_inner {
+    grid-template-columns: 1fr;
+  }
+}

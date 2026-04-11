@@ -22,7 +22,6 @@ function stier_body_classes( $classes ) {
 add_filter( 'body_class', 'stier_body_classes' );
 
 // Add a pingback url auto-discovery header for single posts, pages, or attachments.
-
 function stier_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
@@ -30,9 +29,7 @@ function stier_pingback_header() {
 }
 add_action( 'wp_head', 'stier_pingback_header' );
 
-
 // Login Screen
-
 add_filter( 'login_headerurl', 'my_custom_login_url' );
 function my_custom_login_url($url) {
     return '/';
@@ -64,9 +61,7 @@ function custom_login_logo() {
 }
 add_action('login_enqueue_scripts', 'custom_login_logo');
 
-
 // Make ACF Imposible to deactivate
-
 add_filter('user_has_cap', 'prevent_plugin_deactivation', 10, 3);
 
 function prevent_plugin_deactivation($allcaps, $cap, $args) {
@@ -80,17 +75,14 @@ function prevent_plugin_deactivation($allcaps, $cap, $args) {
     return $allcaps;
 }
 
-
 // Admin footer modification
-
 function dashboard_footer_admin () {
-    echo '<span id="footer-thankyou">Thank you for developing with <a href="https://stierdev.com/" target="_blank">S Tier Dev</a>. Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span> ';
+    echo '<span id="footer-thankyou">Thank you for building with <a href="https://stierdev.com/" target="_blank">S-Tier Dev</a>. Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span> ';
 }
 
 add_filter('admin_footer_text', 'dashboard_footer_admin');
 
 // Settings pages
-
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
@@ -123,9 +115,17 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
+// Hide Block Previews
+add_action( 'enqueue_block_editor_assets', function () {
+    wp_add_inline_style(
+        'wp-edit-blocks',
+        '.block-editor-inserter__preview{display:none !important;}
+		.block-editor-inserter__preview-container {padding-top: 0!important;
+		'
+    );
+} );
 
 // Block Category and placement of it
-
 add_filter('block_categories_all', 'stier_block_category');
 
 function stier_block_category($cats)
@@ -135,7 +135,7 @@ function stier_block_category($cats)
 	$new = array(
 		'stier_block_cat' => array(
 			'slug'  => 's-tier',
-			'title' => 'S Tier'
+			'title' => 'S-Tier'
 		)
 	);
 	$position = 0.1; //
@@ -148,10 +148,7 @@ function stier_block_category($cats)
 	return $cats;
 }
 
-
-
 // Blocks
-
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
 	register_block_type( __DIR__ . '/../blocks/accordion' );
@@ -159,5 +156,5 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/../blocks/info-boxes' );
 	register_block_type( __DIR__ . '/../blocks/basic-section' );
 	register_block_type( __DIR__ . '/../blocks/contact' );
-	register_block_type( __DIR__ . '/../blocks/carousel' );
+	// register_block_type( __DIR__ . '/../blocks/carousel' );
 }
