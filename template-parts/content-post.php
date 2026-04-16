@@ -17,7 +17,7 @@ $excerpt = get_the_excerpt();
 
     <?php if ($title) : ?>
 		<h2 class="gi_title">
-			<a href="<?php the_permalink(); ?>"><?php echo $title; ?></a>
+			<a href="<?php the_permalink(); ?>"><?php echo esc_html($title); ?></a>
 		</h2>
     <?php endif; ?>
     <?php if ($excerpt) :
@@ -29,7 +29,7 @@ $excerpt = get_the_excerpt();
             $trimmed_excerpt.="...";
         }
           ?>
-        <div class="entry-content"> <?php echo $trimmed_excerpt;  ?> </div>
+        <div class="entry-content"> <?php echo esc_html($trimmed_excerpt);  ?> </div>
 		<a class="gi_read_more" href="<?php the_permalink(); ?>">Read More</a>
     <?php endif; ?>
 

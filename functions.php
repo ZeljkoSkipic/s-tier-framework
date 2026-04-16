@@ -85,13 +85,11 @@ add_action('acf/input/admin_head', 'stier_acf_settings');
 
 function stier_scripts()
 {
-	$css_cache_buster = date("YmdHi", filemtime(get_stylesheet_directory() . '/assets/dist/theme.min.css'));
-	$js_cache_buster = date("YmdHi", filemtime(get_stylesheet_directory() . '/assets/dist/theme.min.js'));
+	$css_cache_buster = filemtime(get_stylesheet_directory() . '/assets/dist/theme.min.css');
+	$js_cache_buster = filemtime(get_stylesheet_directory() . '/assets/dist/theme.min.js');
 
 	wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/assets/dist/theme.min.css', array(), $css_cache_buster, 'all');
 	wp_enqueue_script('theme-script', get_template_directory_uri() . '/assets/dist/theme.min.js', array('jquery'), $js_cache_buster);
-
-	wp_enqueue_style('stier-style', get_stylesheet_uri(), array(), '1.0.0');
 
 	wp_localize_script('theme-script', 'theme', [
 		'ajaxUrl' 	=> admin_url('admin-ajax.php'),
@@ -122,18 +120,9 @@ require get_template_directory() . '/includes/custom-menu-walker.php';
 
 require_once get_template_directory() . '/includes/theme-icons/init.php';
 
-// Custom template tags for this theme.
-
-require get_template_directory() . '/includes/template-tags.php';
-
 // Functions which enhance the theme by hooking into WordPress.
 
 require get_template_directory() . '/includes/template-functions.php';
-
-// Customizer additions.
-
-require get_template_directory() . '/includes/customizer.php';
-
 
 // Remove Comments
 
@@ -181,6 +170,3 @@ add_action('init', function () {
 add_action( 'admin_init', function() {
     remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 });
-
-// ACF AI
-// add_filter( 'acf/settings/enable_acf_ai', '__return_true' );

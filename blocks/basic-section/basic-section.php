@@ -1,29 +1,16 @@
 <?php
-$padding = get_field('padding');
 $layout = get_field('layout');
 $stack = get_field('stack');
 
-$class = 'st_block st_section';
-if ( ! empty( $block['className'] ) ) {
-    $class .= ' ' . $block['className'];
-}
-
-if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding;
-}
-
 $sec_in_class = 'st_section_inner container';
 if ( ! empty( $layout ) ) {
-    $sec_in_class .=  ' ' . $layout;
+    $sec_in_class .= ' ' . $layout;
 }
-
 if ( ! empty( $stack ) ) {
-    $sec_in_class .=  ' ' . $stack;
+    $sec_in_class .= ' ' . $stack;
 }
-
 ?>
-
-<section class="<?php echo esc_attr( $class ); ?>">
+<section <?php echo stier_block_attrs( $block, 'st_section' ); ?>>
 	<?php get_template_part('components/background'); ?>
 	<div class="<?php echo $sec_in_class ?>">
 		<?php

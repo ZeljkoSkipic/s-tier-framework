@@ -1,7 +1,7 @@
 <?php
 class CustomMenuWalker extends Walker_Nav_Menu
 {
-    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+    function start_el(&$output, $item, $depth = 0, $args = [], $current_object_id = 0)
     {
 		// Check if the item should open in a new tab
         $target = !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';

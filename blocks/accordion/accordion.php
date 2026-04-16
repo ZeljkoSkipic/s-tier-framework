@@ -1,22 +1,4 @@
-<?php
-$padding = get_field('padding');
-
-$anchor = 'st_accordion';
-if ( ! empty( $block['anchor'] ) ) {
-	$anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
-}
-
-$class = 'st_block st_accordion';
-if ( ! empty( $block['className'] ) ) {
-	$class .= ' ' . $block['className'];
-}
-
-if ( ! empty( $padding) ) {
-	$class .=  ' ' . $padding;
-}
-
-?>
-<section id="<?php echo $anchor; ?>" class="<?php echo esc_attr( $class ); ?>">
+<section <?php echo stier_block_attrs( $block, 'st_accordion' ); ?>>
 <?php get_template_part('components/background'); ?>
 	<div class="st_accordion_inner container">
 	<?php get_template_part('components/intro');

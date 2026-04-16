@@ -1,36 +1,13 @@
 <?php
-$padding = get_field('padding');
-$cols = get_field('columns');
-$tab_cols = get_field('tab_columns');
-$mob_cols = get_field('mob_columns');
-
-$anchor = '';
-if ( ! empty( $block['anchor'] ) ) {
-    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
-}
-
-$class = 'st_block st_info_boxes';
-if ( ! empty( $block['className'] ) ) {
-    $class .= ' ' . $block['className'];
-}
-
-if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding;
-}
-
-if ( ! empty( $cols ) ) {
-    $class .=  ' ' . $cols;
-}
-if ( ! empty( $tab_cols ) ) {
-    $class .=  ' ' . $tab_cols;
-}
-if ( ! empty( $mob_cols ) ) {
-    $class .=  ' ' . $mob_cols;
-}
-
+$extra_classes = [
+    get_field('columns'),
+    get_field('tab_columns'),
+    get_field('mob_columns'),
+];
 ?>
 
-<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
+<section <?php echo stier_block_attrs( $block, 'st_info_boxes', $extra_classes ); ?>>
+
 <?php get_template_part('components/background'); ?>
 	<div class="container">
 		<?php get_template_part('components/intro'); ?>

@@ -1,19 +1,7 @@
 <?php
-$padding = get_field('padding');
 $form = get_field('contact_form');
-
-$anchor = '';
-if ( ! empty( $block['anchor'] ) ) {
-    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
-}
-
-$class = 'st_block st_contact_block';
-if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding;
-}
-
 ?>
-<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
+<section <?php echo stier_block_attrs( $block, 'st_contact_block' ); ?>>
 <?php get_template_part('components/background'); ?>
 	<div class="st_contact_block_inner container">
 		<div class="left">

@@ -815,11 +815,6 @@ a {
   margin-inline: 0.5rem;
 }
 
-/* @import 'blocks/accordion';
-@import 'blocks/tabs';
-@import 'blocks/info-boxes';
-@import 'blocks/basic-section';
-@import 'blocks/contact'; */
 .sub-menu {
   padding-left: 0;
   list-style: none;

@@ -1,16 +1,4 @@
-<?php
-$anchor = '';
-if ( ! empty( $block['anchor'] ) ) {
-    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
-}
-
-$class = 'st_block st_carousel_block st_carousel';
-if ( ! empty( $block['className'] ) ) {
-    $class .= ' ' . $block['className'];
-}
-
-?>
-<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
+<section <?php echo stier_block_attrs( $block, 'st_carousel_block st_carousel', $extra ); ?>>
 	<div class="main-carousel">
 		<?php
 
@@ -47,7 +35,5 @@ if ( ! empty( $block['className'] ) ) {
 			<?php endwhile; ?>
 
 		<?php endif; ?>
-
 	</div>
-
 </section>

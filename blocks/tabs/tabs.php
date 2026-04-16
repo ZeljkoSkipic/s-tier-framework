@@ -1,25 +1,10 @@
 <?php
-$padding = get_field('padding');
-
-$anchor = '';
-if ( ! empty( $block['anchor'] ) ) {
-    $anchor = 'id="' . esc_attr( $block['anchor'] ) . '" ';
+$extra = [];
+if ( get_field('stack_tabs') ) {
+    $extra[] = 'stack_tabs';
 }
-
-$class = 'st_block st_tabs';
-if ( ! empty( $block['className'] ) ) {
-    $class .= ' ' . $block['className'];
-}
-if( get_field('stack_tabs') ) {
-    $class .= ' ' . 'stack_tabs';
-}
-
-if ( ! empty( $padding) ) {
-    $class .=  ' ' . $padding;
-}
-
 ?>
-<section <?php echo $anchor; ?> class="<?php echo esc_attr( $class ); ?>">
+<section <?php echo stier_block_attrs( $block, 'st_tabs', $extra ); ?>>
 <?php get_template_part('components/background'); ?>
 	<div class="container">
 		<?php get_template_part('components/intro'); ?>
