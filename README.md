@@ -36,8 +36,8 @@ Normalize 8.0.1 with S-Tier Edits
 - Fixed Safari Select field style missmatch
 
 ## Prefered installation and usage
-### Run *npx new-s-theme*
-### Edit stgulp.config.js
+#### Run *npx new-s-theme*
+#### Edit stgulp.config.js
 - Change 'projectURL' on line 13
 - *Optional*: Change 'zipFileName' on line 162
-### Run npm start
+#### Run *npm start*
