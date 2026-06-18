@@ -1,6 +1,6 @@
 {
   "name": "s-tier-theme",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "bin": {
     "new-s-theme": "./bin/create.js"
   },

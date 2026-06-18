@@ -55,38 +55,38 @@ $huge-desk-min: 2560px;
 
 @mixin grid-5 {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 @mixin grid-4 {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 @mixin grid-3 {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @mixin grid-2 {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @mixin col-5 {
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 @mixin col-4 {
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 @mixin col-3 {
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @mixin col-2 {
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @mixin col-1 {
@@ -237,6 +237,9 @@ $huge-desk-min: 2560px;
 	overflow: hidden;
 	color: #fff;
 	font-size: clamp(15px, 1.2vw , 18px);
+	@include mob-only {
+		width: 100%;
+	}
 }
 
 @mixin btn-1 {
@@ -247,9 +250,4 @@ $huge-desk-min: 2560px;
 @mixin btn-2 {
 	@include btn;
 	background-color: var(--color-2);
-	&:not(:first-of-type) {
-		@include tab-min {
-			margin-left: 2rem;
-		}
-	}
 }

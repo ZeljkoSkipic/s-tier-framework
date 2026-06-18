@@ -38,8 +38,8 @@ function stier_setup()
 	register_nav_menus(
 		array(
 			'main' => esc_html__('Primary', 'stier'),
-			'footer' => esc_html__('Footer Bottom', 'stier'),
-
+			'footer_1' => esc_html__('Footer 1', 'stier'),
+			'footer_2' => esc_html__('Footer 2', 'stier'),
 		)
 	);
 
@@ -51,8 +51,8 @@ function stier_setup()
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 70,
-			'width'       => 200,
+			'width'       => 150,
+			'height'      => 65,
 			'flex-width'  => true,
 			'flex-height' => true,
 		)

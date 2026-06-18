@@ -171,6 +171,12 @@ html {
   padding-bottom: var(--space-3);
 }
 
+.btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .btn-1 {
   padding: 1rem 2.5rem;
   width: -moz-fit-content;
@@ -184,6 +190,13 @@ html {
   overflow: hidden;
   color: #fff;
   font-size: clamp(15px, 1.2vw, 18px);
+}
+@media (max-width: 480.5px) {
+  .btn-1 {
+    width: 100%;
+  }
+}
+.btn-1 {
   background-color: var(--color-1);
 }
 
@@ -200,12 +213,14 @@ html {
   overflow: hidden;
   color: #fff;
   font-size: clamp(15px, 1.2vw, 18px);
-  background-color: var(--color-2);
 }
-@media (min-width: 480.6px) {
-  .btn-2:not(:first-of-type) {
-    margin-left: 2rem;
+@media (max-width: 480.5px) {
+  .btn-2 {
+    width: 100%;
   }
+}
+.btn-2 {
+  background-color: var(--color-2);
 }
 
 html {
@@ -673,6 +688,13 @@ a {
   overflow: hidden;
   color: #fff;
   font-size: clamp(15px, 1.2vw, 18px);
+}
+@media (max-width: 480.5px) {
+  .wpforms-container .wpforms-submit {
+    width: 100%;
+  }
+}
+.wpforms-container .wpforms-submit {
   background-color: var(--color-1);
   cursor: pointer;
 }
@@ -757,12 +779,12 @@ a {
 }
 .posts_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4.8rem;
 }
 @media (min-width: 480.6px) and (max-width: 834.5px) {
   .posts_grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 480.5px) {
@@ -859,14 +881,14 @@ a {
   overflow: hidden;
   color: #fff;
   font-size: clamp(15px, 1.2vw, 18px);
-  background-color: var(--color-2);
 }
-@media (min-width: 480.6px) {
-  .top_bar a:not(:first-of-type) {
-    margin-left: 2rem;
+@media (max-width: 480.5px) {
+  .top_bar a {
+    width: 100%;
   }
 }
 .top_bar a {
+  background-color: var(--color-2);
   padding-block: 0.5rem;
 }
 
@@ -906,6 +928,7 @@ a {
     list-style: none;
     margin-top: 0;
     margin-bottom: 0;
+    box-sizing: border-box;
   }
   .main-navigation #primary-menu ul.sub-menu {
     background-color: #fff;
@@ -1160,7 +1183,25 @@ label[for=nav-toggle] {
   }
   /* Nav Trigger End */
 }
-footer .footer_inner {
-  display: flex;
-  flex-wrap: wrap;
+footer {
+  padding-top: var(--space-3);
+}
+footer .footer_main {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+@media (max-width: 834.5px) {
+  footer .footer_main {
+    grid-template-columns: 1fr;
+  }
+}
+footer .footer_main .custom-logo-link img {
+  max-width: 20rem;
+}
+footer .footer_main ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }

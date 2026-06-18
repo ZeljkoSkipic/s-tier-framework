@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
         },
@@ -56,7 +56,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
         },
@@ -74,7 +74,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
         },
@@ -144,5 +144,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1775681731
+    "modified": 1776709437
 }

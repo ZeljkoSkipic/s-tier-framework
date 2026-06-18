@@ -39,10 +39,11 @@
                 "id": ""
             },
             "default_value": "",
-            "delay": 0,
+            "allow_in_bindings": 0,
             "tabs": "text",
             "media_upload": 0,
-            "toolbar": "full"
+            "toolbar": "full",
+            "delay": 0
         }
     ],
     "location": [
@@ -63,5 +64,8 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694907830
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1779181881
 }

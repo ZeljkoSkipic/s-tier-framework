@@ -76,7 +76,7 @@
             },
             "layout": "block",
             "pagination": 0,
-            "min": 2,
+            "min": 0,
             "max": 0,
             "collapsed": "",
             "button_label": "Add Column",
@@ -325,7 +325,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "allow_ai_access": 1,
+    "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1775939636
+    "modified": 1778064031
 }

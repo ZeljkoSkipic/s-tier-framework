@@ -3,7 +3,6 @@ $title = get_the_title();
 $image = get_the_post_thumbnail(get_the_id(), 'large');
 $excerpt = get_the_excerpt();
 
-
 ?>
 
 <article class="grid_item">

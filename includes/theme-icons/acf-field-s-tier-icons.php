@@ -118,17 +118,15 @@ class acf_field_s_tier_icons extends \acf_field
 	 * @param array $field
 	 * @return void
 	 */
-	public function render_field_settings($field)
+	public function render_field_settings($field) {}
+
+	private function read_svg_file($file_path)
 	{
-
-	}
-
-	private function read_svg_file($file_path) {
 		$svg_content = "";
 
-		if(file_exists($file_path)) {
+		if (file_exists($file_path)) {
 			$svg = $myfile = fopen($file_path, "r");
-			$svg_content = fread($myfile,filesize($file_path));
+			$svg_content = fread($myfile, filesize($file_path));
 			fclose($svg);
 		}
 
@@ -149,7 +147,7 @@ class acf_field_s_tier_icons extends \acf_field
 			$icon_path = get_attached_file($value);
 			$svg_content = $this->read_svg_file($icon_path);
 
-			if($svg_content) {
+			if ($svg_content) {
 				$value = $svg_content;
 			}
 		}
@@ -168,21 +166,23 @@ class acf_field_s_tier_icons extends \acf_field
 	public function render_field($field)
 	{
 		$icons = get_field('theme_icons', 'options');
+
+		$field_uid = sanitize_key(str_replace(['[', ']'], ['_', ''], $field['name']));
 ?>
 		<div class="s-tier-icons">
 			<div class="s-tier-icons__inner">
 				<div class="s-tier-icons__item">
 					<input <?php if (empty($field['value']) || $field['value'] == 'none') echo 'checked="checked"'; ?>
-						   id="no-icon-<?php echo $field['key']; ?>"
-						   name="<?php echo esc_attr($field['name']) ?>"
-						   value="none"
-						   type="radio">
+						id="no-icon-<?php echo $field_uid; ?>"
+						name="<?php echo esc_attr($field['name']) ?>"
+						value="none"
+						type="radio">
 					<label class="s-tier-icons__item-label no-icon-label <?php if (empty($field['value']) || $field['value'] == 'none') echo 'active'; ?>"
-						   for="no-icon-<?php echo $field['key']; ?>"
-						   title="<?php esc_attr_e('No icon', 'stier'); ?>">
+						for="no-icon-<?php echo $field_uid; ?>"
+						title="<?php esc_attr_e('No icon', 'stier'); ?>">
 						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
-							<line x1="8" y1="8" x2="32" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+							<circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none" />
+							<line x1="8" y1="8" x2="32" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
 						</svg>
 					</label>
 				</div>
@@ -195,24 +195,23 @@ class acf_field_s_tier_icons extends \acf_field
 						if (!$svg) continue;
 				?>
 						<div class="s-tier-icons__item">
-							<input  <?php if ($field['value'] == $icon) echo 'checked="checked"'; ?> id="<?php echo $icon; ?>" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo $icon ?>" type="radio">
-							<label class="s-tier-icons__item-label  <?php if ($field['value'] == $icon) echo 'active'; ?>" for="<?php echo $icon; ?>"><?php echo $svg; ?></label>
+							<input <?php if ($field['value'] == $icon) echo 'checked="checked"'; ?>
+								id="<?php echo $field_uid . '_' . $icon; ?>"
+								name="<?php echo esc_attr($field['name']) ?>"
+								value="<?php echo $icon ?>"
+								type="radio">
+							<label class="s-tier-icons__item-label <?php if ($field['value'] == $icon) echo 'active'; ?>"
+								for="<?php echo $field_uid . '_' . $icon; ?>"><?php echo $svg; ?></label>
 						</div>
 					<?php
 					endforeach;
-					?>
-
-				<?php else : ?>
-
+				else : ?>
 					<p class="no-icons">Add icons from site settings.</p>
 				<?php endif; ?>
 
 			</div>
 		</div>
-
 <?php
-
-
 	}
 
 	/**

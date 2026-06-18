@@ -59,6 +59,7 @@
 		#primary-menu {
 			@include flex;
 			@include clean-list;
+			box-sizing: border-box;
 			ul {
 				&.sub-menu {
 					background-color: #fff;

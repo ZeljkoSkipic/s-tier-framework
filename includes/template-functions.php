@@ -67,6 +67,9 @@ function prevent_plugin_deactivation($allcaps, $cap, $args) {
     return $allcaps;
 }
 
+// ACF Blocks Datastore
+add_filter( 'acf/settings/enable_datastore', '__return_true' );
+
 // Admin footer modification
 function dashboard_footer_admin () {
     echo '<span id="footer-thankyou">Thank you for building with <a href="https://stierdev.com/" target="_blank">S-Tier Dev</a>. Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a>.</span> ';
@@ -133,6 +136,20 @@ function stier_block_attrs( $block, $base_class, $extra_classes = [] ) {
         if ( ! empty( $cls ) ) {
             $classes[] = $cls;
         }
+    }
+
+    // Add empty class if no content fields have values
+    $field_objects = get_field_objects() ?: [];
+    $has_content   = false;
+    $content_types = [ 'text', 'textarea', 'wysiwyg', 'repeater', 'flexible_content', 'gallery' ];
+    foreach ( $field_objects as $field ) {
+        if ( in_array( $field['type'], $content_types, true ) && ! empty( $field['value'] ) ) {
+            $has_content = true;
+            break;
+        }
+    }
+    if ( ! $has_content ) {
+        $classes[] = 'st-block-empty';
     }
 
     return $anchor . ' class="' . esc_attr( implode( ' ', $classes ) ) . '"';

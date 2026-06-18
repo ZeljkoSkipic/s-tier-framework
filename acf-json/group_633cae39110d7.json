@@ -76,7 +76,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "allow_ai_access": 0,
+    "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1773263879
+    "modified": 1781780947
 }

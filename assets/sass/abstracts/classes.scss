@@ -113,6 +113,12 @@
 	padding-bottom: var(--space-3);
 }
 
+.btns {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap
+}
+
 .btn-1 {
 	@include btn-1;
 }

@@ -1,9 +1,10 @@
 div.acf-switch{border-radius:50px}
 div.acf-switch .acf-switch-slider{border-radius:50px}
 .acf-image-uploader .acf-button{border-radius:50px}
+.acf-image-uploader img{border-radius:8px}
 .acf-color-picker .wp-color-result{border-radius:50px;overflow:hidden;outline:0}
 .acf-color-picker .wp-color-result .wp-color-result-text{padding-right:8px}
-.acf-input .acf-link .link-wrap,.acf-input .acf-link a{border-radius:50px}
+.acf-input .acf-link .link-wrap,.acf-input .acf-link a{border-radius:20px}
 .st_contact_block .right{pointer-events:none}
 body #adminmenu .wp-has-current-submenu>a{background:#0071f0 !important;color:#fff !important}
 body #adminmenu .wp-has-current-submenu>a .wp-menu-image:before{color:#fff !important}
@@ -53,6 +54,10 @@ html :where(.wp-block){max-width:100% !important;margin-top:0}
 .editor-visual-editor__post-title-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}
 .is-root-container{z-index:1}
 .wp-block{z-index:2}
+html .post-type-post :where(.wp-block):not(.wp-block-post-title){width:var(--site-width)}
+html .wp-block-post-title{font-size:35px;margin-bottom:35px}
+.st_block.st-block-empty:not(.st_post_group):not(.st_resources_grid){height:100px;padding:0;overflow:hidden}
+.st_block.st-block-empty:not(.st_post_group):not(.st_resources_grid)::before{content:"Add Block content via Sidebar on the right, or the \270E  Expanded Editor";position:absolute;top:0;left:0;width:100%;height:calc(100% - 4px);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;padding-inline:20px;-webkit-box-sizing:border-box;box-sizing:border-box;border:2px dashed #ccc;background:#fafafa;color:#666;font-size:14px;height:100px;z-index:9}
 #wpcontent .acf-admin-toolbar{margin-left:-15px}
 .acf-block-form-modal{max-width:780px !important;background-color:#fdfdfd}
 .acf-block-form-modal .acf-table{border-radius:4px;overflow:hidden}
@@ -81,6 +86,8 @@ html :where(.wp-block){max-width:100% !important;margin-top:0}
 .editor-sidebar .acf-tab-group li a{border:0;background-color:transparent !important;font-size:13px;font-weight:400;color:#000;padding:10px 7.5px !important;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .editor-sidebar .acf-tab-group li.active{border-color:#0071f0;color:#000}
 .editor-sidebar .acf-field{width:100% !important}
+.editor-sidebar .acf-field .description{display:none}
+.editor-sidebar .acf-field textarea{max-height:180px}
 .editor-sidebar .quicktags-toolbar{display:none}
 body .acf-block-preview a{pointer-events:none}
 body #wp-link-wrap .link-nofollow,body #wp-link-wrap .link-sponsored{display:none}
