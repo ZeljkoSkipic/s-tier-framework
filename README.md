@@ -4,8 +4,8 @@
 
 **Built as an workflow streamlining and optimization tool | Evolved to much more**
 
-**WordPress 7 Ready**
-**PHP 8.4 Ready**
+**WordPress 7 and PHP 8.4 Ready**
+
 
 ACF Gutenberg Blocks v3
 - Resources loaded only when block is present on the page
