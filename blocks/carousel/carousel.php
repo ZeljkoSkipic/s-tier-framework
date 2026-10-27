@@ -1,5 +1,5 @@
-<section <?php echo stier_block_attrs( $block, 'st_carousel_block st_carousel', $extra ); ?>>
-	<div class="main-carousel">
+<section <?php echo stier_block_attrs( $block, 'st_carousel_block st_carousel'); ?>>
+	<div class="main-carousel" data-flickity='{"cellAlign": "left", "contain": true}'>
 		<?php
 
 		if( have_rows('slides') ): ?>

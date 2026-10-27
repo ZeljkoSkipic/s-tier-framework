@@ -21,7 +21,7 @@ $extra_classes = [
 				$title = get_sub_field('title');
                 $text = get_sub_field('text');
 				$ib_image = get_sub_field('ib_image');
-				$icon = get_sub_field('icons_test');
+				$icon = get_sub_field('ib_icon');
                 $size = 'full'; ?>
 
                 <div class="st_info_box">

@@ -56,8 +56,8 @@ html :where(.wp-block){max-width:100% !important;margin-top:0}
 .wp-block{z-index:2}
 html .post-type-post :where(.wp-block):not(.wp-block-post-title){width:var(--site-width)}
 html .wp-block-post-title{font-size:35px;margin-bottom:35px}
-.st_block.st-block-empty:not(.st_post_group):not(.st_resources_grid){height:100px;padding:0;overflow:hidden}
-.st_block.st-block-empty:not(.st_post_group):not(.st_resources_grid)::before{content:"Add Block content via Sidebar on the right, or the \270E  Expanded Editor";position:absolute;top:0;left:0;width:100%;height:calc(100% - 4px);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;padding-inline:20px;-webkit-box-sizing:border-box;box-sizing:border-box;border:2px dashed #ccc;background:#fafafa;color:#666;font-size:14px;height:100px;z-index:9}
+.st_block.st-block-empty{height:100px;padding:0;overflow:hidden}
+.st_block.st-block-empty::before{content:"Add Block content via Sidebar on the right, or the \270E  Expanded Editor";position:absolute;top:0;left:0;width:100%;height:calc(100% - 4px);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;padding-inline:20px;-webkit-box-sizing:border-box;box-sizing:border-box;border:2px dashed #ccc;background:#fafafa;color:#666;font-size:14px;height:100px;z-index:9}
 #wpcontent .acf-admin-toolbar{margin-left:-15px}
 .acf-block-form-modal{max-width:780px !important;background-color:#fdfdfd}
 .acf-block-form-modal .acf-table{border-radius:4px;overflow:hidden}
@@ -99,7 +99,8 @@ body #wp-link-wrap .link-nofollow,body #wp-link-wrap .link-sponsored{display:non
 .acf-settings-wrap .acf-tab-group li{min-width:120px;text-align:center;margin-right:16px}
 .acf-settings-wrap .acf-tab-group li a{border:0;background-color:transparent !important;font-size:16px;letter-spacing:.5px;font-weight:400;color:#000;padding-inline:20px}
 .acf-settings-wrap .acf-tab-group li.active{border-bottom:2px solid #0071f0;color:#000}
-.acf-settings-wrap .acf-field .acf-gallery-attachment{width:5% !important}
+.acf-settings-wrap .acf-field.site_icons_setting .acf-gallery-attachment{width:5% !important;min-width:40px}
+.acf-settings-wrap .acf-field.site_icons_setting .acf-gallery-attachment img{padding:5px;-webkit-box-sizing:border-box;box-sizing:border-box}
 @media(min-width:961px){body:not(.folded).auto-fold .interface-interface-skeleton{left:180px}
 body.folded.auto-fold .interface-interface-skeleton{left:55px}
 .auto-fold:not(.folded) .edit-post-layout .components-editor-notices__snackbar{left:200px}

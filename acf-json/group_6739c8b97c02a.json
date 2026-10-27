@@ -16,27 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0,
             "selected": 0
-        },
-        {
-            "key": "field_6739c8b991a62",
-            "label": "Slides",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         },
         {
             "key": "field_6739c936b72ae",
@@ -150,42 +132,6 @@
                     "parent_repeater": "field_6739c936b72ae"
                 }
             ]
-        },
-        {
-            "key": "field_6739c8b99566b",
-            "label": "Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_6739c8b99911d",
-            "label": "Settings",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "title_message",
-                "id": ""
-            },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
         }
     ],
     "location": [
@@ -206,5 +152,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731844147
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1786644543
 }

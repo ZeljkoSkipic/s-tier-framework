@@ -65,21 +65,26 @@ function stier_setup()
 }
 add_action('after_setup_theme', 'stier_setup');
 
+// Admin Styles
+function stier_admin_styles()
+{
+	wp_enqueue_style('admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css');
+}
+add_action('admin_enqueue_scripts', 'stier_admin_styles');
 
-
-function stier_editor_styles() {
-
+// Editor Styles
+function stier_editor_styles()
+{
     add_editor_style( '/assets/dist/theme.min.css' );
 }
 add_action( 'current_screen', 'stier_editor_styles' );
 
-
-function stier_acf_settings() {
-    wp_enqueue_style('admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css');
+// Login Styles
+function stier_login_styles()
+{
+	wp_enqueue_style('login-style', get_template_directory_uri() . '/assets/dist/wp-login.css');
 }
-
-add_action('acf/input/admin_head', 'stier_acf_settings');
-
+add_action('login_head', 'stier_login_styles');
 
 // Enqueue scripts and styles.
 
@@ -99,20 +104,6 @@ function stier_scripts()
 }
 add_action('wp_enqueue_scripts', 'stier_scripts');
 
-// Login Styles
-function stier_login_styles()
-{
-	wp_enqueue_style('login-style', get_template_directory_uri() . '/assets/dist/wp-login.css');
-}
-add_action('login_head', 'stier_login_styles');
-
-// Admin Styles
-function stier_admin_styles()
-{
-	wp_enqueue_style('admin-style', get_template_directory_uri() . '/assets/dist/admin.min.css');
-}
-add_action('admin_enqueue_scripts', 'stier_admin_styles');
-
 // Include Custom Menu Walker
 require get_template_directory() . '/includes/custom-menu-walker.php';
 
@@ -123,6 +114,10 @@ require_once get_template_directory() . '/includes/theme-icons/init.php';
 // Functions which enhance the theme by hooking into WordPress.
 
 require get_template_directory() . '/includes/template-functions.php';
+
+// Images optimization and WebP conversion
+
+require_once get_stylesheet_directory() . '/includes/image-optimization.php';
 
 // Remove Comments
 
@@ -170,3 +165,14 @@ add_action('init', function () {
 add_action( 'admin_init', function() {
     remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 });
+
+// Remove Default Patterns
+function remove_default_wp_patterns() {
+    remove_theme_support( 'core-block-patterns' );
+}
+add_action( 'after_setup_theme', 'remove_default_wp_patterns' );
+
+// Keep stylesheets external for BrowserSync on the local site to allow CSS injecting instead of full reload.
+if ( 'local' === wp_get_environment_type() ) {
+	add_filter( 'styles_inline_size_limit', '__return_zero' );
+}

@@ -37,3 +37,4 @@ assets/dist/theme.js
 blocks/accordion/accordion.js
 blocks/contact/contact.css
 blocks/tabs/tabs.js
+package.json

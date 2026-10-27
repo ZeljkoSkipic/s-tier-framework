@@ -12,11 +12,10 @@ get_header();
 <?php
 while ( have_posts() ) :
 the_post(); ?>
-<main id="primary" class="site-main container">
+<main id="primary" class="site-main container space_2_3">
 	<article class="post_main">
 		<?php
 		the_title( '<h1 class="title-1">', '</h1>' );
-		echo wp_kses_post( get_field('intro') );
 		echo get_the_date();
 		the_content(); ?>
 	</article>
@@ -26,7 +25,7 @@ the_post(); ?>
 
 </main><!-- #main -->
 
-<div class="container">
+<div class="container space_0_2">
 	<?php the_post_navigation(
 		array(
 			'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'stier' ) . '</span> <span class="nav-title">%title</span>',

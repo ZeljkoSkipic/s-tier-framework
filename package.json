@@ -4,11 +4,13 @@
   "bin": {
     "new-s-theme": "./bin/create.js"
   },
-  "description": "Modern Gulp workflow for WordPress ACF Blocks and theme development. Works with Node.js v18+. Developed by Zeljko Skipic @ S-Tier Dev",
+  "description": "Modern Gulp workflow for WordPress ACF Blocks and theme development, with live CSS injection. Works with Node.js v18+. Developed by Zeljko Skipic @ S-Tier Dev",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "zip": "gulp zip"
+    "zip": "gulp zip",
+    "css": "gulp css",
+    "blocks:css": "gulp blocksCss"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",

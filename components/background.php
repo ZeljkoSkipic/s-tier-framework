@@ -5,7 +5,6 @@ $bg_img = get_field('background_image');
 $bg_img_mob = get_field('background_image_mob');
 $size = 'full';
 ?>
-<?php if($use_bg) { ?>
 <div class="block_bg" style="background-color: <?php echo esc_attr($bg_color); ?>">
 <?php
 if( $bg_img ) {
@@ -18,4 +17,3 @@ if( $bg_img_mob ) {
 ?>
 
 </div>
-<?php } ?>

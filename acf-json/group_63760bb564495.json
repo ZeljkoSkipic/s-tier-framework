@@ -85,7 +85,7 @@
                 {
                     "key": "field_665c962be5baf",
                     "label": "Select Icon or Upload Image",
-                    "name": "icons_test",
+                    "name": "ib_icon",
                     "aria-label": "",
                     "type": "s_tier_icons",
                     "instructions": "",
@@ -327,5 +327,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1778064031
+    "modified": 1781886980
 }

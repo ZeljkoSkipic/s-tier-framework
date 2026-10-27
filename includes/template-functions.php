@@ -141,7 +141,7 @@ function stier_block_attrs( $block, $base_class, $extra_classes = [] ) {
     // Add empty class if no content fields have values
     $field_objects = get_field_objects() ?: [];
     $has_content   = false;
-    $content_types = [ 'text', 'textarea', 'wysiwyg', 'repeater', 'flexible_content', 'gallery' ];
+    $content_types = [ 'text', 'textarea', 'wysiwyg', 'repeater', 'flexible_content', 'gallery', 'oembed' ];
     foreach ( $field_objects as $field ) {
         if ( in_array( $field['type'], $content_types, true ) && ! empty( $field['value'] ) ) {
             $has_content = true;
@@ -186,5 +186,5 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/../blocks/info-boxes' );
 	register_block_type( __DIR__ . '/../blocks/basic-section' );
 	register_block_type( __DIR__ . '/../blocks/contact' );
-	// register_block_type( __DIR__ . '/../blocks/carousel' );
+	register_block_type( __DIR__ . '/../blocks/carousel' );
 }

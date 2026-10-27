@@ -804,11 +804,11 @@ a {
   color: var(--t-color);
 }
 .posts_grid .grid_item .gi_image {
-  aspect-ratio: 16/9;
   margin-bottom: 8px;
 }
 .posts_grid .grid_item .gi_image img {
   height: 100%;
+  aspect-ratio: 16/9;
 }
 .posts_grid .grid_item .gi_read_more {
   margin-top: 1.6rem;
@@ -1030,6 +1030,9 @@ label[for=nav-toggle] {
   .nav_btn {
     display: none;
   }
+  #primary-menu {
+    box-sizing: border-box;
+  }
   .header-main {
     position: sticky;
     top: 0;
@@ -1051,7 +1054,7 @@ label[for=nav-toggle] {
     max-width: 50%;
     margin: 0;
     display: flex;
-    max-height: calc(100% - 15px);
+    max-height: calc(100% - 20px);
   }
   .header-main img {
     height: 100%;

@@ -8,6 +8,9 @@ label[for="nav-toggle"] {
 	.nav_btn {
 		display: none;
 	}
+	#primary-menu {
+		box-sizing: border-box;
+	}
     .header-main {
         position: sticky;
         top: 0;
@@ -28,7 +31,7 @@ label[for="nav-toggle"] {
 			max-width: 50%;
 			margin: 0;
 			display: flex;
-			max-height: calc(100% - 15px);
+			max-height: calc(100% - 20px);
 		}
 		img {
 			height: 100%;

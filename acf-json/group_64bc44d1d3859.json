@@ -31,7 +31,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "site_icons_setting",
                 "id": ""
             },
             "return_format": "id",
@@ -68,5 +68,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1774549733
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1781886891
 }
